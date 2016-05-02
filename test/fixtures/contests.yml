@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  state_id: 1
+  date: 2016-04-25 03:34:37
+  map_id: 1
+  contest_type: MyString
+  number_delegates: 1
+
+two:
+  state_id: 1
+  date: 2016-04-25 03:34:37
+  map_id: 1
+  contest_type: MyString
+  number_delegates: 1

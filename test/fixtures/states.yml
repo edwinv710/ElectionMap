@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  symbol: MyString
+  republican_pledged_delegates: 1
+  democrat_pledged_delegates: 1
+  democrat_super_delegates: 1
+  general_delegates: 1
+
+two:
+  name: MyString
+  symbol: MyString
+  republican_pledged_delegates: 1
+  democrat_pledged_delegates: 1
+  democrat_super_delegates: 1
+  general_delegates: 1

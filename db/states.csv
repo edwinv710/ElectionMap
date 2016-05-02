@@ -1,0 +1,58 @@
+name,symbol,state_id,,gen_date,gen_delegates,,rep_date,rep_contest_type,rep_delegates,,dem_date,rep_contest_type,dem_total_delegates,dem_super_delegates,dem_pledged_delegates
+Alabama,AL,1,,11/08/16,9,,03/01/16,primary,50,,03/01/16,primary,60,7,53
+Alaska,AK,2,,11/08/16,3,,03/01/16,caucus,28,,03/26/16,caucus,20,4,16
+American Samoa,AS,3,,11/08/16,,,03/22/16,caucus,9,,03/01/16,caucus,10,4,6
+Arizona,AZ,4,,11/08/16,11,,03/22/16,primary,58,,03/22/16,primary,85,10,75
+Arkansas,AR,5,,11/08/16,6,,03/01/16,primary,40,,03/01/16,primary,37,5,32
+California,CA,6,,11/08/16,55,,06/07/16,primary,172,,06/07/16,primary,546,71,475
+Colorado,CO,7,,11/08/16,9,,03/01/16,caucus,37,,03/01/16,caucus,79,13,66
+Connecticut,CT,8,,11/08/16,7,,04/26/16,primary,28,,04/26/16,primary,70,15,55
+Delaware,DE,9,,11/08/16,3,,04/26/16,primary,16,,04/26/16,primary,31,10,21
+Democrats Abroad,DA,10,,11/08/16,,,,,,,03/01/16,caucus,17,4,13
+Florida,FL,11,,11/08/16,29,,03/15/16,primary,99,,03/15/16,primary,246,32,214
+Georgia,GA,12,,11/08/16,16,,03/01/16,primary,76,,03/01/16,primary,116,14,102
+Guam,GU,13,,11/08/16,,,03/12/16,caucus,9,,05/07/16,caucus,12,5,7
+Hawaii,HI,14,,11/08/16,4,,03/08/16,caucus,19,,03/26/16,caucus,34,9,25
+Idaho,ID,15,,11/08/16,4,,03/08/16,primary,32,,03/22/16,caucus,27,4,23
+Illinois,IL,16,,11/08/16,20,,03/15/16,primary,69,,03/15/16,primary,182,26,156
+Indiana,IN,17,,11/08/16,11,,05/03/16,primary, b,,05/03/16,primary,92,9,83
+Iowa,IA,18,,11/08/16,6,,02/01/16,caucus,30,,02/01/16,caucus,52,8,44
+Kansas,KS,19,,11/08/16,6,,03/05/16,caucus,40,,03/05/16,caucus,37,4,33
+Kentucky,KY,20,,11/08/16,8,,03/05/16,caucus,46,,05/17/16,primary,61,6,55
+Louisiana,LA,21,,11/08/16,8,,03/05/16,primary,46,,03/05/16,primary,58,7,51
+Maine,ME,22,,11/08/16,4,,03/05/16,caucus,23,,03/06/16,caucus,30,5,25
+Maryland,MD,23,,11/08/16,10,,04/26/16,primary,38,,04/26/16,primary,118,23,95
+Massachusetts,MA,24,,11/08/16,11,,03/01/16,primary,42,,03/01/16,primary,116,25,91
+Michigan,MI,25,,11/08/16,16,,03/08/16,primary,59,,03/08/16,primary,147,17,130
+Minnesota,MN,26,,11/08/16,10,,03/01/16,caucus,38,,03/01/16,caucus,93,16,77
+Mississippi,MS,27,,11/08/16,6,,03/08/16,primary,40,,03/08/16,primary,41,5,36
+Missouri,MO,28,,11/08/16,10,,03/15/16,primary,52,,03/15/16,primary,84,13,71
+Montana,MT,29,,11/08/16,3,,06/07/16,primary,27,,06/07/16,primary,27,6,21
+Nebraska,NE,30,,11/08/16,5,,05/10/16,primary,36,,03/05/16,caucus,30,5,25
+Nevada,NV,31,,11/08/16,6,,02/23/16,caucus,30,,02/20/16,caucus,43,8,35
+New Hampshire,NH,32,,11/08/16,4,,02/09/16,primary,23,,02/09/16,primary,32,8,24
+New Jersey,NJ,33,,11/08/16,14,,06/07/16,primary,51,,06/07/16,primary,142,16,126
+New Mexico,NM,34,,11/08/16,5,,06/07/16,primary,24,,06/07/16,primary,43,9,34
+New York,NY,35,,11/08/16,29,,04/19/16,primary,95,,04/19/16,primary,291,44,247
+North Carolina,NC,36,,11/08/16,15,,03/15/16,primary,72,,03/15/16,primary,121,14,107
+North Dakota,ND,37,,11/08/16,3,,04/13/16,caucus,28,,06/07/16,caucus,23,5,18
+Northern Marianas,NMA,38,,11/08/16,,,03/15/16,caucus,9,,03/12/16,caucus,11,5,6
+Ohio,OH,39,,11/08/16,18,,03/15/16,primary,66,,03/15/16,primary,159,16,143
+Oklahoma,OK,40,,11/08/16,7,,03/01/16,primary,43,,03/01/16,primary,42,4,38
+Oregon,OR,41,,11/08/16,7,,05/17/16,primary,28,,05/17/16,primary,74,13,61
+Pennsylvania,PA,42,,11/08/16,20,,04/26/16,primary,71,,04/26/16,primary,210,21,189
+Puerto Rico,PR,43,,11/08/16,,,03/06/16,primary,23,,06/05/16,caucus,67,7,60
+Rhode Island,RI,44,,11/08/16,4,,04/26/16,primary,19,,04/26/16,primary,33,9,24
+South Carolina,SC,45,,11/08/16,9,,02/20/16,primary,50,,02/27/16,primary,59,6,53
+South Dakota,SD,46,,11/08/16,3,,06/07/16,primary,29,,06/07/16,primary,25,5,20
+Tennessee,TN,47,,11/08/16,11,,03/01/16,primary,58,,03/01/16,primary,76,9,67
+Texas,TX,48,,11/08/16,38,,03/01/16,primary,155,,03/01/16,primary,252,30,222
+Utah,UT,49,,11/08/16,6,,03/22/16,caucus,40,,03/22/16,caucus,37,4,33
+Vermont,VT,50,,11/08/16,3,,03/01/16,primary,16,,03/01/16,primary,26,10,16
+Virgin Islands,VI,51,,11/08/16,,,03/10/16,caucus,9,,06/04/16,caucus,12,5,7
+Virginia,VA,52,,11/08/16,13,,03/01/16,primary,49,,03/01/16,primary,110,15,95
+Washington,WA,53,,11/08/16,12,,05/24/16,primary,44,,03/26/16,caucus,118,17,101
+Washington, DC,DC,54,,11/08/16,3,,03/12/16,convention,19,,06/14/16,primary,45,25,20
+West Virginia,WV,55,,11/08/16,5,,05/10/16,primary,34,,05/10/16,primary,37,8,29
+Wisconsin,WI,56,,11/08/16,10,,04/05/16,primary,42,,04/05/16,primary,96,10,86
+Wyoming,WY,57,,11/08/16,3,,03/01/16,caucus,29,,04/09/16,caucus,18,4,14
