@@ -1,1 +1,0 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/edwinvelasquez/Sites/ElectionMap","disabled":false,"__vagrantfile":true},"v-csc-1d427d04a":{"id":"v-csc-1d427d04a","guestpath":"/tmp/vagrant-chef/f357240c251997de988c683ee4127336/cookbooks","hostpath":"/Users/edwinvelasquez/Sites/ElectionMap/cookbooks","disabled":false,"__vagrantfile":true}}}
