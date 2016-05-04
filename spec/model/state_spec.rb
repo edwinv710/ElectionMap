@@ -18,7 +18,7 @@ describe State do
       it "should be invalid if a state with the same name or symbols are created twice" do
         state            = create(:state, :new_york)
         state_dup_name   = build(:state, name: "New York")
-        state_dup_symbol = build(:state, symbol: "ny")
+        state_dup_symbol = build(:state, symbol: "NY")
         expect(state_dup_symbol.valid?).to eq(false)
         expect(state_dup_name.valid?).to eq(false)
       end

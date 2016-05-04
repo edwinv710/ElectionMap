@@ -75,6 +75,49 @@ describe Election do
     end
   end
 
+  describe "jObject" do
+    it "should return a hash respresentation of all the results for all contests" do
+      election = create(:election_with_contests_and_results)
+      election_JObject = {
+        "name" => election.name, "affiliation" => election.affiliation,
+        "affiliation" => "none",
+        "processType" => "general",
+        "candidates" => {
+          "1" => {"first_name" => "John", "last_name" => "Doe"}, 
+          "2" => {"first_name" => "Jane", "last_name" => "Doe"},
+          "3" => {"first_name" => "Poo", "last_name" => "Bear"}
+        }, 
+        "results" => {
+          "NY" => {
+            "1" => 100,
+            "2" => 200,
+            "3" => 150,
+            "winner" => "2"
+          },
+          "NJ" => {
+            "1" => 50,
+            "2" => 100,
+            "3" => 75,
+            "winner" => "2"
+          },
+          "PA" => {
+            "1" => 0,
+            "2" => 0,
+            "3" => 0,
+            "winner" => "-1"
+          },
+          "OR" => {
+            "1" => 0,
+            "2" => 0,
+            "3" => 0,
+            "winner" => "-1"
+          }
+        }
+      }
+      expect(election.jObject).to eq(election_JObject)
+    end
+  end
+
   describe ".active" do
     it "should return all active elections" do
         election1 = Election.create(name: "Republican Primary", affiliation: "republican", process_type: "primary", year: 2016)       

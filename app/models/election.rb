@@ -22,5 +22,24 @@ class Election < ApplicationRecord
       self.candidates.select("candidates.*, SUM(results.delegate_count) as delegate_count").joins(:results).joins("INNER JOIN contests ON results.contest_id = contests.id").where("contests.election_id = ?", self.id).group("1").order("delegate_count DESC")
    end
 
+   def jObject
+      candidates_array = self.candidates.pluck(:id, :first_name, :last_name)
+      results = {}
+      candidates = {}
+      contests.each do |c|
+         state = c.state.symbol
+         results[state] = {}
+         candidates_array.each do |ca|
+            candidates[ca[0].to_s] = {"first_name" => ca[1], "last_name" => ca[2]}
+            total = c.results.by_candidate(ca[0]).total_delegate_count
+            results[state]["#{ca[0]}"] = total
+         end
+         winner = results[state].max_by{|k, v| v}
+         results[state]["winner"] = (winner[1] == 0 ? "-1" : winner[0].to_s)
+      end
+
+      return {"name" => self.name, "processType" => self.process_type, "affiliation" => self.affiliation, "candidates" => candidates, "results" => results}
+   end  
+   
 
 end

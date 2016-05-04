@@ -21,11 +21,17 @@ gem 'jbuilder', '~> 2.0'
 # Use Puma as the app server
 gem 'puma'
 
+gem 'gon'
+gem 'factory_girl_rails'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.1'
   gem 'factory_girl_rails'
   gem 'rails-controller-testing'
   gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
 
 # Use ActiveModel has_secure_password

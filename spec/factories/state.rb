@@ -6,12 +6,12 @@ FactoryGirl.define do
 
       trait :new_york do
          name "New York"
-         symbol "ny"
+         symbol "NY"
       end
 
       trait :new_jersey do
          name "New Jersey"
-         symbol "nj"
+         symbol "NJ"
       end
    end
 end

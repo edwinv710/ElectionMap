@@ -33,7 +33,7 @@ FactoryGirl.define do
                create(:result, candidate: election.candidates[1], delegate_count: 200, contest: election.contests[0])
                create(:result, candidate: election.candidates[2], delegate_count: 150, contest: election.contests[0])
             
-               create(:result, candidate: election.candidates[0], delegate_count: 50, contest: election.contests[1])
+               create(:result, candidate: election.candidates[0], delegate_count: 150, contest: election.contests[1])
                create(:result, candidate: election.candidates[1], delegate_count: 100, contest: election.contests[1])
                create(:result, candidate: election.candidates[2], delegate_count: 75, contest: election.contests[1])
          end

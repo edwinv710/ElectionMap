@@ -1,6 +1,10 @@
+<div class="mContainer">
 <h3> <%= @election.name %> </h3>
-s
-<div id="map" style="width: 930px; height: 630px; border: solid 3px red;"></div>
+
+ <div class="lg-map-wrapper">
+   <div id="lg-map"></div>
+   <div class="lg-map-text"></div>
+ </div>
 
 
 <% @election.candidates_sorted_by_delegate_count.each do |c| %>
@@ -27,58 +31,8 @@ s
       <% end %>
    
 </table>
+</div>
 
 <script>
-   $(document).ready(function() {
-     $('#map').usmap({
-       'stateSpecificStyles': {
-         'AK' : {fill: '#f00'}
-       },
-       'stateSpecificHoverStyles': {
-         'HI' : {fill: '#ff0'}
-       },
-       
-       'mouseoverState': {
-         'HI' : function(event, data) {
-           //return false;
-         }
-       },
-       
-       
-       'click' : function(event, data) {
-         $('#alert')
-           .text('Click '+data.name+' on map 1')
-           .stop()
-           .css('backgroundColor', '#ff0')
-           .animate({backgroundColor: '#ddd'}, 1000);
-       }
-     });
-     
-     $('#map2').usmap({
-       'stateStyles': {
-         fill: '#025', 
-         "stroke-width": 1,
-         'stroke' : '#036'
-       },
-       'stateHoverStyles': {
-         fill: 'teal'
-       },
-       
-       'click' : function(event, data) {
-         $('#alert')
-           .text('Click '+data.name+' on map 2')
-           .stop()
-           .css('backgroundColor', '#af0')
-           .animate({backgroundColor: '#ddd'}, 1000);
-       }
-     });
-     
-     $('#over-md').click(function(event){
-       $('#map').usmap('trigger', 'MD', 'mouseover', event);
-     });
-     
-     $('#out-md').click(function(event){
-       $('#map').usmap('trigger', 'MD', 'mouseout', event);
-     });
-   });
-   </script>
+
+</script>
