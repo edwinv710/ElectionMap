@@ -23,6 +23,7 @@ gem 'puma'
 
 gem 'gon'
 gem 'factory_girl_rails'
+#gem 'react-rails', '~> 1.7.0'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.1'
