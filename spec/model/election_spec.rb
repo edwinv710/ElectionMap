@@ -70,8 +70,7 @@ describe Election do
       election = create(:election_with_contests_and_results)
       candidates = election.candidates_sorted_by_delegate_count
       candidate_array = candidates.map{|x| [x.first_name, x.last_name, x.delegate_count]} 
-      expect(candidate_array).to eq([["Jane", "Doe", 300], ["Poo", "Bear", 225], ["John", "Doe", 150]])
-    
+      expect(candidate_array).to eq([["Jane", "Doe", 300], ["John", "Doe", 250], ["Poo", "Bear", 225]])
     end
   end
 
@@ -79,13 +78,13 @@ describe Election do
     it "should return a hash respresentation of all the results for all contests" do
       election = create(:election_with_contests_and_results)
       election_JObject = {
-        "name" => election.name, "affiliation" => election.affiliation,
-        "affiliation" => "none",
+        "name" => election.name,
         "processType" => "general",
+        "affiliation" => "none",
         "candidates" => {
-          "1" => {"first_name" => "John", "last_name" => "Doe"}, 
-          "2" => {"first_name" => "Jane", "last_name" => "Doe"},
-          "3" => {"first_name" => "Poo", "last_name" => "Bear"}
+          "1" => {"first_name" => "John", "last_name" => "Doe", "delegate_count" => 250, "id" => 1}, 
+          "2" => {"first_name" => "Jane", "last_name" => "Doe", "delegate_count" => 300, "id" => 2},
+          "3" => {"first_name" => "Poo", "last_name" => "Bear", "delegate_count" => 225,"id" => 3}
         }, 
         "results" => {
           "NY" => {
@@ -95,10 +94,10 @@ describe Election do
             "winner" => "2"
           },
           "NJ" => {
-            "1" => 50,
+            "1" => 150,
             "2" => 100,
             "3" => 75,
-            "winner" => "2"
+            "winner" => "1"
           },
           "PA" => {
             "1" => 0,

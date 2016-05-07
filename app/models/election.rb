@@ -19,18 +19,22 @@ class Election < ApplicationRecord
    end
 
    def candidates_sorted_by_delegate_count
-      self.candidates.select("candidates.*, SUM(results.delegate_count) as delegate_count").joins(:results).joins("INNER JOIN contests ON results.contest_id = contests.id").where("contests.election_id = ?", self.id).group("1").order("delegate_count DESC")
+      candidates_with_delegate_count.order("delegate_count DESC")
+   end
+
+   def candidates_with_delegate_count
+      self.candidates.select("candidates.*, SUM(results.delegate_count) as delegate_count").joins(:results).joins("INNER JOIN contests ON results.contest_id = contests.id").where("contests.election_id = ?", self.id).group("1")
    end
 
    def jObject
-      candidates_array = self.candidates.pluck(:id, :first_name, :last_name)
+      candidates_array = self.candidates_with_delegate_count.map{|x| [x.id, x.first_name, x.last_name, x.delegate_count]} 
       results = {}
       candidates = {}
       contests.each do |c|
          state = c.state.symbol
          results[state] = {}
          candidates_array.each do |ca|
-            candidates[ca[0].to_s] = {"first_name" => ca[1], "last_name" => ca[2]}
+            candidates[ca[0].to_s] = {"first_name" => ca[1], "last_name" => ca[2], "delegate_count" => ca[3], "id" => ca[0]}
             total = c.results.by_candidate(ca[0]).total_delegate_count
             results[state]["#{ca[0]}"] = total
          end
