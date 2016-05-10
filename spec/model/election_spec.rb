@@ -74,46 +74,17 @@ describe Election do
     end
   end
 
-  describe "jObject" do
-    it "should return a hash respresentation of all the results for all contests" do
-      election = create(:election_with_contests_and_results)
-      election_JObject = {
-        "name" => election.name,
-        "processType" => "general",
-        "affiliation" => "none",
-        "candidates" => {
-          "1" => {"first_name" => "John", "last_name" => "Doe", "delegate_count" => 250, "id" => 1}, 
-          "2" => {"first_name" => "Jane", "last_name" => "Doe", "delegate_count" => 300, "id" => 2},
-          "3" => {"first_name" => "Poo", "last_name" => "Bear", "delegate_count" => 225,"id" => 3}
-        }, 
-        "results" => {
-          "NY" => {
-            "1" => 100,
-            "2" => 200,
-            "3" => 150,
-            "winner" => "2"
-          },
-          "NJ" => {
-            "1" => 150,
-            "2" => 100,
-            "3" => 75,
-            "winner" => "1"
-          },
-          "PA" => {
-            "1" => 0,
-            "2" => 0,
-            "3" => 0,
-            "winner" => "-1"
-          },
-          "OR" => {
-            "1" => 0,
-            "2" => 0,
-            "3" => 0,
-            "winner" => "-1"
-          }
-        }
-      }
-      expect(election.jObject).to eq(election_JObject)
+  describe "#to_builder" do
+    it "should return the name, process type, candidates hash, and contests hash" do
+      election = build(:election)
+      candidate = double("Candidate")
+      contest = double{"Contest"}
+      allow(candidate).to receive(:to_builder).and_return({"firstName": "Bob"})
+      allow(contest).to receive(:to_builder).and_return({"name": "New York General"})
+      allow(election).to receive(:candidates).and_return([candidate])
+      allow(election).to receive(:contests).and_return([contest])
+      expect(election.to_builder).to eq({"name": "Democratic Primary", "processType": "general", "affiliation": "none", 
+        "candidates": [{"firstName": "Bob"}], "contests":[{"name": "New York General"}]})
     end
   end
 

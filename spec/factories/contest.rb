@@ -9,5 +9,11 @@ FactoryGirl.define do
          election
       end
 
+      factory :ny_democratic_primary do
+         contest_type "primary"
+         number_delegates 2000
+         state {create(:state, :new_york)}
+      end
+
    end
 end

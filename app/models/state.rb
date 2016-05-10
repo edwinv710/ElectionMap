@@ -6,4 +6,11 @@ class State < ApplicationRecord
    has_many :contests
    has_many :states
 
+   def to_builder
+      Jbuilder.new do |state|
+         state.name name
+         state.symbol symbol
+      end
+   end
+
 end

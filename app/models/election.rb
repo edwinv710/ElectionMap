@@ -26,24 +26,14 @@ class Election < ApplicationRecord
       self.candidates.select("candidates.*, SUM(results.delegate_count) as delegate_count").joins(:results).joins("INNER JOIN contests ON results.contest_id = contests.id").where("contests.election_id = ?", self.id).group("1")
    end
 
-   def jObject
-      candidates_array = self.candidates_with_delegate_count.map{|x| [x.id, x.first_name, x.last_name, x.delegate_count]} 
-      results = {}
-      candidates = {}
-      contests.each do |c|
-         state = c.state.symbol
-         results[state] = {}
-         candidates_array.each do |ca|
-            candidates[ca[0].to_s] = {"first_name" => ca[1], "last_name" => ca[2], "delegate_count" => ca[3], "id" => ca[0]}
-            total = c.results.by_candidate(ca[0]).total_delegate_count
-            results[state]["#{ca[0]}"] = total
-         end
-         winner = results[state].max_by{|k, v| v}
-         results[state]["winner"] = (winner[1] == 0 ? "-1" : winner[0].to_s)
+   def to_builder
+      Jbuilder.new do |election|
+         election.name name
+         election.processType process_type
+         election.affiliation affiliation
+         election.candidates candidates.collect { |candidate| candidate.to_builder }
+         election.contests   contests.collect   { |contest| contest.to_builder }
       end
-
-      return {"name" => self.name, "processType" => self.process_type, "affiliation" => self.affiliation, "candidates" => candidates, "results" => results}
-   end  
-   
+   end
 
 end

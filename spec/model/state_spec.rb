@@ -33,4 +33,11 @@ describe State do
 
   end
 
+  describe "to_builder" do
+    it "should resturn a json with the name and state" do
+      state = build(:state, :new_york)
+      expect(state.to_builder).to eq({"name": "New York", "symbol": "NY"})
+    end
+  end
+
 end

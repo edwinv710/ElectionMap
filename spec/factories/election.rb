@@ -1,14 +1,38 @@
 FactoryGirl.define do
-   factory :election do
+   factory :democratic_primary_election, class: :election do
+      name "Democratic Primary"
+      affiliation "none"
+      process_type "general"
+      year 2016
+      candidates {[create(:candidate, first_name: "Bernie", last_name: "Sanders"), create(:candidate, first_name: "Hillary", last_name: "Clinton")]}
 
+      transient do
+         states [['Alabama','AL'],['Alaska','AK'],['American Samoa','AS'],['Arizona','AZ'],['Arkansas','AR'],['California','CA'],['Colorado','CO'],['Connecticut','CT'],['Delaware','DE'],['Democrats Abroad','DA'],['Washington DC',' DC'],['Florida','FL'],['Georgia','GA'],['Guam','GU'],['Hawaii','HI'],['Idaho','ID'],['Illinois','IL'],['Indiana','IN'],['Iowa','IA'],['Kansas','KS'],['Kentucky','KY'],['Louisiana','LA'],['Maine','ME'],['Maryland','MD'],['Massachusetts','MA'],['Michigan','MI'],['Minnesota','MN'],['Mississippi','MS'],['Missouri','MO'],['Montana','MT'],['Nebraska','NE'],['Nevada','NV'],['New Hampshire','NH'],['New Jersey','NJ'],['New Mexico','NM'],['New York','NY'],['North Carolina','NC'],['North Dakota','ND'],['Northern Marianas','NMA'],['Ohio','OH'],['Oklahoma','OK'],['Oregon','OR'],['Pennsylvania','PA'],['Puerto Rico','PR'],['Rhode Island','RI'],['South Carolina','SC'],['South Dakota','SD'],['Tennessee','TN'],['Texas','TX'],['Utah','UT'],['Vermont','VT'],['Virgin Islands','VI'],['Virginia','VA'],['Washington','WA'],['West Virginia','WV'],['Wisconsin','WI'],['Wyoming','WY']]
+
+         delegates [53,16,6,75,32,475,66,55,21,13,214,102,7,25,23,156,83,44,33,55,51,25,95,91,130,77,36,71,21,25,35,24,126,34,247,107,18,6,143,38,61,189,60,24,53,20,67,222,33,16,7,95,101,25,29,86,14]
+
+         contest_delegates_candidate_1 [9, 13, 2, 33, 10, nil, 41, 27, 9, 9,nil, 73, 29, 3, 17, 18, 77, 44, 21, 23, nil, 14, 16, 34, 45, 67, 46, 4, 35, nil, 15, 15, 15, nil, nil, 108, 47, nil, 2, 62, 21, nil, 83, nil, 13, 14, nil, 23, 75, 27, 16, nil, 33, 74, nil, 48, 7]
+         contest_delegates_candidate_2  [44, 3, 4, 42, 22, nil, 25, 28, 12, 4, nil, 141, 73, 4, 8, 5, 79, 39, 23, 10, nil, 37, 9, 61, 46, 63, 31, 32, 36, nil, 10, 20, 9, nil, nil, 139, 60, nil, 4, 81, 17, nil, 106, nil, 11, 39, nil, 44, 147, 6, 0, nil, 62, 27, nil, 38, 7]
       
+      end
 
+      after(:create) do |election, evaluator|
+         evaluator.states.each_with_index do  |state, i| 
+            s = create(:state, name: state[0], symbol: state[1])
+            c = create(:contest, election: election, state: s, number_delegates: evaluator.delegates[i])
+            unless (evaluator.contest_delegates_candidate_1[i].nil? ||  evaluator.contest_delegates_candidate_2[i].nil?)
+               create(:result, candidate_id: election.candidates[0].id, delegate_count: evaluator.contest_delegates_candidate_1[i], contest: c)
+               create(:result, candidate_id: election.candidates[1].id, delegate_count: evaluator.contest_delegates_candidate_2[i], contest: c)
+            end
+         end
+      end
+   end
+   factory :election do
       name "General Elections"
       affiliation "none"
       process_type "general"
       sequence(:year) { |n| (2000 + n) }
-      candidates {[create(:male_candidate), create(:female_candidate), create(:candidate, first_name: "Poo", last_name: "Bear")]}
-      
+
       factory :election_with_contests do
          transient do
             state_array []
@@ -24,6 +48,10 @@ FactoryGirl.define do
       factory :election_with_contests_and_results do
 
          after(:create) do |election, evaluator|
+               election.candidates << create(:male_candidate)
+               election.candidates << create(:female_candidate)
+               election.candidates << create(:candidate, first_name: "Poo", last_name: "Bear")
+               
                create(:contest, election: election, state: create(:state, :new_york))
                create(:contest, election: election, state: create(:state, :new_jersey))
                create(:contest, election: election, state: create(:state, name: "Pensylvania", symbol: "PA"))
@@ -38,9 +66,10 @@ FactoryGirl.define do
                create(:result, candidate: election.candidates[2], delegate_count: 75, contest: election.contests[1])
          end
          
-      end
-
-
-
+      end     
    end
 end
+
+
+
+

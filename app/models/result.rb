@@ -19,4 +19,16 @@ class Result < ApplicationRecord
       self.where(candidate_id: candidate_id)
    end
 
+   def self.contest_ids
+      self.pluck(:contest_id)
+   end
+
+   def to_builder
+      Jbuilder.new do |result|
+         result.candidateId candidate_id
+         result.delegateCount delegate_count
+         result.delegateType delegate_type
+      end
+   end
+
 end

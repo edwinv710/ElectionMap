@@ -16,4 +16,14 @@ class Contest < ApplicationRecord
       self.joins(:results).where.not(results: { delegate_type: "pledged"} )
    end
 
+   def to_builder
+      Jbuilder.new do |contest|
+         contest.state state.to_builder
+         contest.date date
+         contest.contestType contest_type
+         contest.numberDelegates number_delegates
+         contest.results results.collect { |result| result.to_builder }
+      end
+   end
+
 end

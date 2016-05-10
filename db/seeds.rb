@@ -8,4 +8,5 @@
 
 require 'factory_girl_rails'
 
-FactoryGirl.create(:election_with_contests_and_results)
+FactoryGirl.create(:democratic_primary_election)
+

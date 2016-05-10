@@ -54,26 +54,31 @@ describe Contest do
 
   describe ".without_pledged_results" do
     it "should return all contests that does not have pledged results" do
+      4.times {|i|  build(:contest).save(validate: false) }
+      4.times do |i| 
+        delegate_type = (i % 2 == 0 ? "super" : "pledged")
+        build(:result, delegate_type: delegate_type, contest_id: (i+1)).save(validate: false)
+      end
+      expect(Contest.without_pledged_results).to eq([Contest.all[0], Contest.all[2]])
+    end
+  end
 
+  describe "#to_builder" do
+    it "should return the state json, date, contest type, number of delegates, and results array in a hash format" do
       date = DateTime.now
-
-      state1 = State.create(name: "New York", symbol: "ny")
-      state2 = State.create(name: "New Jersey", symbol: "nj")
-      state3 = State.create(name: "Vermont", symbol: "vt")
-      state4 = State.create(name: "Florida", symbol: "fl")
-      
-      contest1 = Contest.create(state_id: state1.id, date: date, contest_type: "republican_primary", election_id: election.id, number_delegates: 200)
-      contest2 = Contest.create(state_id: state2.id, date: date, contest_type: "republican_primary", election_id: election.id, number_delegates: 200)
-      contest3 = Contest.create(state_id: state3.id, date: date, contest_type: "republican_primary", election_id: election.id, number_delegates: 200)
-      contest4 = Contest.create(state_id: state4.id, date: date, contest_type: "republican_primary", election_id: election.id, number_delegates: 200)
-
-      result1 = Result.create(candidate_id: candidate.id, delegate_count: 20, delegate_type: "super", contest_id: contest1.id)
-      result2 = Result.create(candidate_id: candidate.id, delegate_count: 20, delegate_type: "pledged", contest_id: contest2.id)
-      result3 = Result.create(candidate_id: candidate.id, delegate_count: 20, delegate_type: "pledged", contest_id: contest3.id)
-      result4 = Result.create(candidate_id: candidate.id, delegate_count: 20, delegate_type: "super", contest_id: contest4.id)
-
-      expect(Contest.without_pledged_results).to eq([contest1, contest4])
-
+      contest = build(:ny_democratic_primary, date: date)
+      contest.save(validate: false)
+      results = [double("first result"), double("second result"), double("third result")]
+      results.each_with_index do |r, i|
+        allow(r).to receive(:to_builder).and_return({"candidateId": i, "delegateCount": i*2, "delegateType": "custom#{i}"})
+      end
+      allow(contest).to receive(:results).and_return(results)
+      expect(contest.to_builder).to eq({
+        "state": {"name": "New York", "symbol": "NY"}, "date": date, "contestType": "primary", "numberDelegates": 2000, 
+        "results": [{"candidateId": 0, "delegateCount": 0, "delegateType": "custom0"}, 
+                    {"candidateId": 1, "delegateCount": 2, "delegateType": "custom1"}, 
+                    {"candidateId": 2, "delegateCount": 4, "delegateType": "custom2"}]
+      })
     end
   end
 

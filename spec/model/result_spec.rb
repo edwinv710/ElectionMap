@@ -60,9 +60,27 @@ describe Result do
         build(:result, delegate_count: 300, delegate_type: "custom_one", candidate: candidate).save(validate: false)
       ]
       results = Result.where(delegate_type: "custom_one")
-
       expect(results.by_candidate(candidate.id)).to eq([results[0], results[2]])
     end
   end
+
+  describe "#to_builder" do
+    it "should resturn a json with the the candidate id, delegate count, and  delegate type" do
+      result = build(:result, delegate_count: 200, delegate_type: "custom_one", candidate_id: 1)
+      expect(result.to_builder).to eq({"candidateId": 1, "delegateCount": 2, "delegateType": "custom_one"})
+    end
+  end
+
+  describe ".contest_ids" do
+    it "should return all of the contest ids corresponding to the all of the results" do
+      build(:result, contest_id:  5, delegate_type: "custom_one").save(validate: false)
+      build(:result, contest_id:  8, delegate_type: "custom_one").save(validate: false)
+      build(:result, contest_id: 12, delegate_type: "custom_one").save(validate: false)
+      results = Result.where(delegate_type: "custom_one")
+      expect(results.contest_ids).to eq([5, 8, 12])
+    end
+  end
+
+  
 
 end
