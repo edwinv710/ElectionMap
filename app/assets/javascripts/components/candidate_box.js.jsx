@@ -15,7 +15,7 @@ var CandidateBox = React.createClass({
    return (
          <div class="candidate-box" data-id={this.props.candidateID}>
             <div class="color-key" style={colorKeyStyle}>&nbsp;</div> 
-            <span> {this.props.candidate.first_name} {this.props.candidate.last_name} - {this.props.candidate.delegate_count} </span>
+            <span> {this.props.candidate.firstName} {this.props.candidate.lastName} - {this.props.candidate.delegateCount} </span>
          </div>
       )
   }

@@ -16,14 +16,24 @@ class Contest < ApplicationRecord
       self.joins(:results).where.not(results: { delegate_type: "pledged"} )
    end
 
+   def self.states
+      State.find_all_by_contests(self)
+   end
+
+   def self.min_and_max_dates
+      self.pluck("MIN(date), MAX(date)").flatten
+   end
+
    def to_builder
       Jbuilder.new do |contest|
-         contest.state state.to_builder
+         contest.state JSON.parse(state.to_builder.target!)
          contest.date date
          contest.contestType contest_type
          contest.numberDelegates number_delegates
-         contest.results results.collect { |result| result.to_builder }
+         contest.results results.collect { |result| JSON.parse(result.to_builder.target!)  }
       end
    end
+
+
 
 end

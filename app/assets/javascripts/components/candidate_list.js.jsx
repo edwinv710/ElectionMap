@@ -1,7 +1,7 @@
 var CandidateList = React.createClass({
 
          render: function() {
-            var candidateBox = election.candidatesSortedByDelegates().map(function(candidate){
+            var candidateBox = this.props.candidateStore.map(function(candidate){
                return ( <CandidateBox candidate={candidate} candidateID={candidate.id} key={candidate.id} />)
             })
             

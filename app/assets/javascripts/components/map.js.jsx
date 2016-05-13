@@ -7,10 +7,10 @@ var MapDisplay = React.createClass({
    },
 
 
-   shouldComponentUpdate(nextProps, nextState) {
-      if(nextProps.results.update){election.updateMap();}
-      return false;
-   },
+   // shouldComponentUpdate(nextProps, nextState) {
+   //    if(nextProps.results.update){election.updateMap();}
+   //    return false;
+   // },
 
   render: function() {
     return (

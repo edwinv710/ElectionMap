@@ -37,16 +37,13 @@ describe Election do
   end
 
   describe "states" do 
-    it "should return every state associated with every contest in the election" do
-      State.create(name: "Vermont", symbol: "vt")
-      states = {ny: State.create(name: "New York", symbol: "ny"), nj: State.create(name: "New Jersey", symbol: "nj"), pa: State.create(name: "Pennsylvania", symbol: "pa")}
-      election = Election.create(name: "Republican Primary", affiliation: "republican", process_type: "primary", year: 2016)       
-      dates = {ny: DateTime.new(2016, 3, 2), nj: DateTime.new(2015, 1, 2), pa: DateTime.new(2020, 3, 2)}
-      states.keys.each do |key|
-        Contest.create(state_id: states[key].id, date: dates[key], contest_type: "caucus", number_delegates: 200, election_id: election.id)
-      end
-
-      expect(election.states).to eq([states[:nj], states[:ny], states[:pa]])
+    it "should call the state method for candidates association" do
+      election = build(:election)
+      contests = double("Contests")
+      allow(election).to receive(:contests).and_return(contests)
+      allow(contests).to receive(:states).and_return([])
+      election.states
+      expect(contests).to have_received(:states)
     end
   end
 

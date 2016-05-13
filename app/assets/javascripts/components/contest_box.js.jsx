@@ -9,42 +9,39 @@ var ContestBox = React.createClass({
       };
    },
 
-   componentWillMount() {
-     GLOB.setContestBox = (title, abbreviation) => {
-       this.setState({title: title, abbreviation: abbreviation});     
-     };    
-   },
 
    updateResults: function(key){
     var that = this;
     return function(e){
       var value = parseInt(e.target.value) || 0;
-      that.props.updateResults(that.state.abbreviation, key, value);
+      that.props.updateResults(that.props.contestStore.abbreviation, key, value);
     }
    },
 
    candidateNodes: function(){
-    if (!this.state.abbreviation) return [];
+    if (!this.props.contestStore) return [];
     var that = this;
-    return election.candidateArray().map(function(c){
-      var key = c.id;
-      var delegate_count = election.results[that.state.abbreviation][key];
+    return Object.keys(this.props.contestStore.results).map(function(key){
+      var delegateCount = that.props.contestStore.results[key].delegateCount;
+      var firstName = that.props.contestStore.results[key].firstName;
+      var lastName = that.props.contestStore.results[key].lastName;
       
       return (
-        <div className="candidate-slider" key={c.id}>
-           <span> {c.first_name} {c.last_name} </span>
-           <input type="text" name="dcount" onChange={that.updateResults(key)} value={delegate_count}/>
+        <div className="candidate-slider" key={key}>
+           <span> {firstName} {lastName} </span>
+           <input type="text" name="dcount" onChange={that.updateResults(key)} value={delegateCount}/>
         </div> 
       );
     })
    },
 
 
-  render: function() {
 
+  render: function() {
+    var title = this.props.contestStore.name || "General";
     return (
       <div className="contest-box">
-         <h4> {this.state.title} </h4>
+         <h4> {title} </h4>
          <p> {this.state.description} </p>
 
          {this.candidateNodes()}

@@ -3,35 +3,34 @@ var ElectionContainer = React.createClass({
    getInitialState: function() {
       
       return { 
-         name: election.name, 
-         processType: election.processType, 
-         affilitation: election.affilitation,
-         candidates: election.candidates,
-         results: election.results
+         mapStore: electionConductor.mapStore,
+         candidateStore: electionConductor.candidateStore,
+         contestStore: electionConductor.contestStore,
+         activeState: "NY"
       };
    },
 
    componentWillMount() {
-       election.setUpdate(this, this.setState)  
+        electionConductor.setUpdate(this, this.setState)  
    },
 
    componentDidMount() {
-       election.createMap()  
+       electionConductor.createMap()  
    },
 
    updateResults: function(state, candidate, value){
-
-      election.setStateResult(state, candidate, value);
+       electionConductor.updateStateResult(state, candidate, value);
    },
 
    render: function() {
+            // console.log(this.state.contestStore[this.state.activeState])
+
       return (
 
          <div className="mContainer">
-            <h2> {this.state.name} </h2>
-            <CandidateList candidates={this.state.candidates} />
-            <MapDisplay results={this.state.results} />
-            <ContestBox candidates={this.state.candidates} results={this.state.results} updateResults={this.updateResults} />
+            <CandidateList candidateStore={this.state.candidateStore} />
+            <MapDisplay mapStore={this.state.mapStore} />
+            <ContestBox contestStore={this.state.contestStore[this.state.activeState]} activeState={this.state.activeState} updateResults={this.updateResults} /> 
          </div>
       )
    }

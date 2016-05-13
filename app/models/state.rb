@@ -13,4 +13,8 @@ class State < ApplicationRecord
       end
    end
 
+   def self.find_all_by_contests(contests)
+      self.joins(:contests).where(contests: {id: contests.pluck(:id)})
+   end
+
 end

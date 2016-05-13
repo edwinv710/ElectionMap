@@ -31,7 +31,7 @@ Object.keys = Object.keys || (function() {
 
 
 
-var CANDIDATECOLORS = ["#fffff", "#59798e", "#b12401", "#c0cc85"];
+var CANDIDATECOLORS = ["#59798e", "#b12401", "#c0cc85"];
 
 var GLOB = {};
 

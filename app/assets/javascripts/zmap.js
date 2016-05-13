@@ -1,14 +1,14 @@
-(function setCandidateColors() {
-   var i = 0;
-   for (var key in gon.election.candidates) {
-      if (!gon.election.candidates.hasOwnProperty(key)) continue;
-      gon.election.candidates[key]["color"] = CANDIDATECOLORS[i % (CANDIDATECOLORS.length - 1) + 1];
-      i++;
-   }
-})();
+// (function setCandidateColors() {
+//    var i = 0;
+//    for (var key in gon.election.candidates) {
+//       if (!gon.election.candidates.hasOwnProperty(key)) continue;
+//       gon.election.candidates[key]["color"] = CANDIDATECOLORS[i % (CANDIDATECOLORS.length - 1) + 1];
+//       i++;
+//    }
+// })();
 
 
-Map = function(candidates, results) {
+Map = function(mapStore) {
 
   var mapConfig = USMapConfig;
 
@@ -29,6 +29,7 @@ Map = function(candidates, results) {
    var useTextAtBottom;
    var win = $(window);
    var winWidth = win.width();
+   var stateSelectAction = null;
 
 
    window.mobileAndTabletcheck = function() {
@@ -64,25 +65,14 @@ Map = function(candidates, results) {
       }
    })();
 
-   (function displayCandidateColorKey() {
-      $(".candidate-box").each(function(index) {
-         var candidateID = $(this).data("id");
-         var color = candidates[candidateID].color;
-         $(this).find(".color-key").css("background-color", color);
-      });
-   })();
 
-   
-
-   var getCandidateColor = function(stateSymbol) {
-      stateResult = results[stateSymbol]
-      if (stateResult) {
-         if (parseInt(stateResult.winner) > 0) {
-            return candidates[stateResult["winner"]].color;
-         }
-         return config.defaultFillColor;
-      }
+   var getStateColor = function(stateSymbol){
+      if(mapStore[stateSymbol]) return mapStore[stateSymbol];
       return config.defaultFillColor;
+   }
+
+   var onStateSelect = function(action){
+      stateSelectAction = action;
    }
 
    function createMap() {
@@ -115,16 +105,6 @@ Map = function(candidates, results) {
          var obj = regions[shortName];
          obj.attr(attributes);
 
-         if (!(paths[i].abbreviation in results)) {
-            var stateObject = { winner: "-1" };
-            for (var k in candidates) {
-               if(candidates.hasOwnProperty(k)){
-                  stateObject[k] = 0;
-               }
-            }
-            results[paths[i].abbreviation] = stateObject;
-         }
-
          if (!paths[i].enable) {
             boxattrs = {
                'fill': config.offColor,
@@ -132,7 +112,7 @@ Map = function(candidates, results) {
             };
          } else {
             boxattrs = {
-               'fill': getCandidateColor(paths[i].abbreviation),
+               'fill': getStateColor(paths[i].abbreviation),
                stroke: config.strokeColor,
                'id': i
             };
@@ -207,7 +187,7 @@ Map = function(candidates, results) {
                isPin = false;
                $(shapeAr[id].node).css("opacity", "0.8");
                current = shapeAr[id];
-               GLOB.setContestBox(title, abbreviation);
+               stateSelectAction(abbreviation);
             }
          });
 
@@ -422,32 +402,22 @@ Map = function(candidates, results) {
    }
 
 
-   function updateState(state, result) {
-      oldResult = results[state]
-      results[state] = result
-      results[state]["winner"] = Object.keys(result).reduce(function(a, b) {
-         return result[a] > result[b] ? a : b
-      })
-      if (oldResult["winner"] != results[state]["winner"]) {
-         $('.box-' + state).attr('fill', getCandidateColor(state));
-      }
+   function updateState(state, color) {
+      $('.box-' + state).attr('fill', getCandidateColor(state));
    }
 
-   function update(newResults){
-      for(key in newResults){
-        if(!_.isEqual(newResults[key], results[key])) updateState(state, result);
-      }
-   }
+   // function update(newResults){
+   //    for(key in newResults){
+   //      if(!_.isEqual(newResults[key], results[key])) updateState(state, result);
+   //    }
+   // }
 
-   function getColorByCandidate(c){
-      if(c > 0) return candidates[c].color;
-      return config.defaultFillColor;
-   }
+   // function getColorByCandidate(c){
+   //    if(c > 0) return candidates[c].color;
+   //    return config.defaultFillColor;
+   // }
 
-   function updateContest(state, winner){
-      if(winner === "-1") winner = "0";
-      
-      var color = getColorByCandidate(winner);
+   function updateContest(state, color){
       $(".box-"+state).attr("fill", color);
    }
 
@@ -458,7 +428,7 @@ Map = function(candidates, results) {
    return {
       createMap: createMap,
       createPins: createPins,
-      update: update,
-      updateContest: updateContest
+      updateContest: updateContest,
+      onStateSelect: onStateSelect
    }
 }

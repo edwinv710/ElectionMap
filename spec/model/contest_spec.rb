@@ -80,6 +80,14 @@ describe Contest do
                     {"candidateId": 2, "delegateCount": 4, "delegateType": "custom2"}]
       })
     end
+
+    describe ".states" do
+      it "should call the find_all_by_contests method from the state class, passing itself" do
+        allow(State).to receive(:find_all_by_contests).and_return([])
+        Contest.states
+        expect(State).to have_received(:find_all_by_contests)
+      end
+    end
   end
 
   

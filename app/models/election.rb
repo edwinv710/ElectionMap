@@ -11,11 +11,11 @@ class Election < ApplicationRecord
    scope :active, -> {where(is_active: true)}
 
    def states
-      self.contests.includes(:state).map(&:state)
+      self.contests.states
    end
 
    def start_and_end_dates
-      contests.pluck("MIN(date), MAX(date)").flatten
+      contests.min_and_max_dates
    end
 
    def candidates_sorted_by_delegate_count
@@ -23,7 +23,7 @@ class Election < ApplicationRecord
    end
 
    def candidates_with_delegate_count
-      self.candidates.select("candidates.*, SUM(results.delegate_count) as delegate_count").joins(:results).joins("INNER JOIN contests ON results.contest_id = contests.id").where("contests.election_id = ?", self.id).group("1")
+      self.candidates.with_delegate_count_by_election(self.id)
    end
 
    def to_builder
@@ -31,8 +31,8 @@ class Election < ApplicationRecord
          election.name name
          election.processType process_type
          election.affiliation affiliation
-         election.candidates candidates.collect { |candidate| candidate.to_builder }
-         election.contests   contests.collect   { |contest| contest.to_builder }
+         election.candidates candidates_with_delegate_count.collect { |candidate| JSON.parse(candidate.to_builder.target!) }
+         election.contests   contests.collect   { |contest| JSON.parse(contest.to_builder.target!) }
       end
    end
 
