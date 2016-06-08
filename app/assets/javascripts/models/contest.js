@@ -8,7 +8,11 @@ var Contest = function(contest){
    var stateLabel = state.symbol;
    var totalsByCandidates = {};
    var userIndex = null;
+
+   var userResults = [];
    
+
+
    (function createResults(){
       results = contest.results.map(function(result){
          return Result(result);
@@ -30,44 +34,55 @@ var Contest = function(contest){
       });
       if(valueHash[keysSorted[0]] === valueHash[keysSorted[1]]) winner = 0;
       if(stateLabel == "NY"){
-         console.log("poop")
-         console.log(valueHash)
       }
       
-      totalsByCandidates =  Object.assign({}, valueHash);
+      totalsByCandidates =  valueHash;
       if(stateLabel == "NY"){
-         console.log(totalsByCandidates)
       }
       winner = parseInt(keysSorted[0], 10)
       
    })();
 
+   var resetValuesExcept = function(candidateId){
+      Object.keys(totalsByCandidates).forEach(function(key){
+         if(key != candidateId) totalsByCandidates[key] = 0;
+      });
 
+      results.forEach(function(result){
+         if(result.candidateId != candidateId && result.delegateType === "user")  result.delegateCount = 0;
+      });
 
+   };
 
-   var update = function update(candidate, value){
-      difference = value - totalsByCandidates[candidate];
+   var update = function(candidate, value){
+      if(this.rule != "proportional") resetValuesExcept(candidate);
+      
       var result = results.find(function(r){
          return (r.candidateId === candidate && r.delegateType === "user")
       });
       if(result){
+         difference = value - totalsByCandidates[candidate.toString()];
          result.updateDelegateCount(difference);
       }else{
-         results.push(Result({candidateId: candidate, delegateCount: difference, delegateType: "user"}));
+         var newResult = Result({candidateId: candidate, delegateCount: value, delegateType: "user"});
+         userResults.push(newResult);
+         results.push(newResult);
       }
       totalsByCandidates[candidate.toString()] = value;
       return updateWinner();
    }
-
+// refactor
    var updateWinner = function(){
       var oldWinner = winner;
+
       keys = Object.keys(totalsByCandidates);
       keys.sort(function(a, b){
          return totalsByCandidates[b] - totalsByCandidates[a];
       });
-      if(keys.length > 1 && totalsByCandidates[keys[0]] > totalsByCandidates[keys[1]]){
+
+      if((keys.length > 1 && totalsByCandidates[keys[0]] > totalsByCandidates[keys[1]]) || (keys.length === 1 && totalsByCandidates[keys[0]] > 0)){
          winner = parseInt(keys[0], 10);
-      }else{
+      }else{ 
          winner = 0;
       } 
       return [oldWinner, winner];
@@ -75,13 +90,16 @@ var Contest = function(contest){
 
    return {
       state: state,
-      date:  date,
+      date:  new Date(date),
       contestType:  contestType,
       numberDelegates:  numberDelegates,
       results: results,
       stateLabel: stateLabel,
       winner: winner,
       totalsByCandidates: totalsByCandidates,
-      update: update
+      update: update,
+      name: contest.state.name,
+      rule: contest.rule,
+      userResults: userResults
    }
 }

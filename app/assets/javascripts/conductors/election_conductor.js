@@ -1,50 +1,16 @@
 ElectionConductor = function(electionObject){
 
-   var mapStore = {};
-   var candidateStore = [];
-   var contestStore = {};
    var election = Election(electionObject);
+   var mapStore = MapStore(election);
+   var candidateStore = CandidateStore(election);
+   var contestStore = ContestStore(election);
+   var tableStore = TableStore(election);
+   var delegatesNeeded = election.delegatesNeeded;
    var targetComponent;
    var updateFunction;
    var map;
+   var set;
 
-   (function setMapStore(){
-      election.contests.forEach(function(contest){
-         if(contest.winner > 0){
-            // console.log(election.candidates)
-            var candidateIndex = election.candidateIdToIndex[contest.winner.toString()]
-            mapStore[contest.stateLabel] = election.candidates[candidateIndex].color;
-         }else{
-            mapStore[contest.stateLabel] = USMapConfig.config.defaultFillColor;
-         }
-      });
-   })();
-
-   (function setContestStore(){
-      election.contests.forEach(function(contest){
-         contestStore[contest.state.symbol] = {name: contest.state.name, abbreviation: contest.state.symbol, "results": {}}
-         election.candidates.forEach(function(candidate){
-            contestStore[contest.state.symbol]["results"][candidate.id.toString()] = {};
-            contestStore[contest.state.symbol]["results"][candidate.id.toString()].delegateCount = contest.totalsByCandidates[candidate.id.toString()] || 0
-            contestStore[contest.state.symbol]["results"][candidate.id.toString()].firstName = candidate.firstName;
-            contestStore[contest.state.symbol]["results"][candidate.id.toString()].lastName = candidate.lastName;
-         });
-      });
-   })();
-
-   (function setCandidateStore(){
-      candidateStore = election.candidates.map(function(candidate){
-         return {id: candidate.id, firstName: candidate.firstName, lastName: candidate.lastName, color: candidate.color, delegateCount: candidate.delegateCount};
-      });
-      // console.log(candidateStore);
-      sortCandidateStore();
-   })();
-
-   function sortCandidateStore(){
-      candidateStore.sort(function(a, b){
-         return b.delegateCount - a.delegateCount;
-      });
-   }
 
    function setUpdate(target, method){
       targetComponent = target;
@@ -53,7 +19,9 @@ ElectionConductor = function(electionObject){
 
    function createMap(){
       var that = this;
-      map = Map(mapStore);
+      map = Map(mapStore.data, function(element, state){
+         $(window).scrollTo("."+state+"-row");
+      });
       map.createMap();
       map.onStateSelect(function(state){
          that.setActive(state);
@@ -61,42 +29,35 @@ ElectionConductor = function(electionObject){
    }
 
    function updateComponent(result){
-      updateFunction.call(targetComponent, result)
+      updateFunction.call(targetComponent, result);
    }
    function setActive(state){
       updateFunction.call(targetComponent, {activeState: state});
    }
 
    var updateStateResult = function(state, candidateId, value){
-      winners = election.updateContest(state, candidateId, value);
-      difference = value - contestStore[state].results[candidateId].delegateCount
-      contestStore[state].results[candidateId].delegateCount = value;
-      candidate = candidateStore.find(function(candidate){
-         return (candidate.id == parseInt(candidateId));
-      });
-      candidate.delegateCount += difference;
-      sortCandidateStore();
-      updateComponent({contestStore: contestStore, candidateStore: candidateStore});
-      if(winners[0] != winners[1]) updateMapWinner(state, winners[1]);
+      winners = election.update(state, candidateId.toString(), value);
+      candidateStore.update(election);
+      tableStore.update(state, election);
+      updateComponent({candidateStore: candidateStore.data, tableStore: tableStore.data});
    }
 
-   function updateMapWinner(state, candidate){
-      var c = candidateStore.find(function(c){
-         return (c.id === parseInt(candidate));
-      })
-
-      var color =  (c ? c.color : CANDIDATECOLORS[0]);
-
+   function updateMapWinner(state, winner){
+      var candidate = candidateStore.find(winner);
+      var color =  (candidate ? candidate.color : CANDIDATECOLORS[0]);
       map.updateContest(state, color);
    }
 
    return {
-      mapStore: mapStore,
+      mapStore: mapStore.data,
       createMap: createMap,
-      candidateStore: candidateStore,
-      contestStore: contestStore,
+      candidateStore: candidateStore.data,
+      contestStore: contestStore.data,
       setUpdate: setUpdate,
       updateStateResult: updateStateResult,
-      setActive: setActive
+      setActive: setActive,
+      tableStore: tableStore.data,
+      delegatesNeeded: delegatesNeeded,
+      totalSuperDelegates: election.totalSuperDelegates
    }
 }

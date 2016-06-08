@@ -8,5 +8,12 @@
 
 require 'factory_girl_rails'
 
+Election.destroy_all
+Candidate.destroy_all
+Contest.destroy_all
+Map.destroy_all
+Result.destroy_all
+State.destroy_all
+
 FactoryGirl.create(:democratic_primary_election)
 

@@ -9,10 +9,18 @@ class Result < ApplicationRecord
    belongs_to :candidate
 
    scope :pledged, -> {where(delegate_type: "pledged")}
-   scope :super, -> {where(delegate_type: "pledged")}
+   scope :super, -> {where(delegate_type: "super")}
 
    def self.total_delegate_count
       self.sum(:delegate_count)
+   end
+
+   def self.pledged_delegate_count
+      self.pledged.sum(:delegate_count)
+   end
+
+   def self.super_delegate_count
+      self.super.sum(:delegate_count)
    end
 
    def self.by_candidate(candidate_id)

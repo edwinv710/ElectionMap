@@ -21,6 +21,13 @@ describe Candidate do
     end
   end
 
+  describe "#image_url" do
+    it "should return the image url passed" do
+      candidate = build(:candidate, image_url: "http://google.com/")
+      expect(candidate.image_url).to eq("http://google.com/")
+    end
+  end
+
   describe "#full_name" do
     it "should return the first name and last name combined into one string" do
       expect(build(:male_candidate).full_name).to eq("John Doe")
@@ -38,6 +45,8 @@ describe Candidate do
       expect(contest_ids).to eq([1,2,6])
     end
   end
+
+
 
   describe "#to_builder" do
     it "should return a hash with the first name, last name, affiliation, status, and contests ids for the candidate" do

@@ -13,3 +13,117 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+
+/*
+.card{
+  width: 300px;
+  background-color: white;
+      box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 0 1px 2px rgba(0,0,0, 0.24);
+    border-radius: 2px;
+    margin: 10px;
+    color: #666;
+    display: inline-block;
+}
+
+
+.card .banner img{
+  width: 100%;
+}
+
+.card .portrait{
+  width: 33%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: -18%;
+  margin-bottom: 2%;
+}
+
+.card .portrait img{
+  width: 100%;
+  border-radius: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white;
+      box-sizing: border-box;
+    transition: all 0.3s ease;
+    outline: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0, 0.12), 0 2px 4px rgba(0,0,0, 0.24);
+}
+
+.info{
+  text-align: center;
+   font-family: 'Roboto', sans-serif;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+.info h2{
+  color: #444;
+}
+
+.info h5, .info h2{
+  margin: 5px 0 5px 0;
+}
+
+.info header{
+  margin-bottom: 5px;
+}
+
+.info a{
+  text-decoration: none;
+}
+
+.info section{
+  margin-bottom: 40px;
+}
+
+.progress-bar{
+  height: 30px;
+  background-color: #C9C9C9;
+  position: relative;
+ 
+}
+
+.remaining{
+  height: 20px;
+  background-color: #3590E7;
+  color:  white;
+  padding: 5px;
+  font-weight: 700;
+  letter-spacing: 1.5;
+  overflow: hidden;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  white-space: nowrap;
+  padding-left: 20px;
+  width: 0px;
+  
+}
+
+.background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  padding: 5px;
+  font-weight: 700;
+  text-align: left;
+  z-index: 0;
+  padding-left: 20px;
+}
+
+.delegates header{
+  margin-bottom: 10px;
+  color:  #444;
+}
+
+.delegates .group{
+  margin-bottom: 10px;
+}*/

@@ -31,6 +31,7 @@ class Contest < ApplicationRecord
          contest.contestType contest_type
          contest.numberDelegates number_delegates
          contest.results results.collect { |result| JSON.parse(result.to_builder.target!)  }
+         contest.rule rule
       end
    end
 

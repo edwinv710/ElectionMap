@@ -23,7 +23,12 @@ class Election < ApplicationRecord
    end
 
    def candidates_with_delegate_count
-      self.candidates.with_delegate_count_by_election(self.id)
+      self.candidates.include_delegate_count.participating_in_election(self.id)
+   end
+
+   def self.find_by_friendly_url_path(path)
+      name = path.split("-").join(" ")
+      self.find_by(name: name)
    end
 
    def to_builder
@@ -31,6 +36,8 @@ class Election < ApplicationRecord
          election.name name
          election.processType process_type
          election.affiliation affiliation
+         election.delegatesNeeded delegates_needed
+         election.totalSuperDelegates total_super_delegates
          election.candidates candidates_with_delegate_count.collect { |candidate| JSON.parse(candidate.to_builder.target!) }
          election.contests   contests.collect   { |contest| JSON.parse(contest.to_builder.target!) }
       end

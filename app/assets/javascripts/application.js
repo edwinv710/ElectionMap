@@ -12,8 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require react
 //= require react_ujs
+//= require moment
+//= require jquery.scrollTo
+//= require dependantSliders
 //= require components
 //= require_tree .
 

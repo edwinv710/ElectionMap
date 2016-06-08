@@ -11,16 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160429084437) do
+ActiveRecord::Schema.define(version: 20160527094034) do
 
   create_table "candidates", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.integer  "party_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.string   "affiliation"
-    t.string   "status"
+    t.integer  "status"
+    t.string   "image_url"
+    t.string   "banner_url"
+    t.string   "description"
+    t.string   "website_url"
+    t.datetime "last_competitive_date"
   end
 
   create_table "candidates_elections", id: false, force: :cascade do |t|
@@ -39,6 +44,7 @@ ActiveRecord::Schema.define(version: 20160429084437) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.integer  "election_id"
+    t.string   "rule"
   end
 
   create_table "contests_elections", id: false, force: :cascade do |t|
@@ -51,11 +57,16 @@ ActiveRecord::Schema.define(version: 20160429084437) do
   create_table "elections", force: :cascade do |t|
     t.string   "name"
     t.string   "affiliation"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.string   "process_type"
     t.integer  "year"
-    t.boolean  "is_active",    default: true
+    t.boolean  "is_active",             default: true
+    t.integer  "delegates_needed"
+    t.string   "description"
+    t.string   "website_url"
+    t.integer  "total_super_delegates"
+    t.index ["name"], name: "index_elections_on_name"
   end
 
   create_table "maps", force: :cascade do |t|

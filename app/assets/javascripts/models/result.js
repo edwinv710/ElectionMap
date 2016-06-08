@@ -4,7 +4,7 @@ var Result = function(result){
    var delegateType = result.delegateType;
 
    var updateDelegateCount = function(value){
-      delegateCount = delegateCount + value;
+      this.delegateCount = this.delegateCount + value;
    }
 
    return {

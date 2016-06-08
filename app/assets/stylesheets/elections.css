@@ -3,24 +3,317 @@
   They will automatically be included in application.css.
 */
 
-.mContainer{
-   width: 900px;}
-   #candidates-box{
-      margin-bottom: 40px
-   }
-   .candidate-box{
-      margin-bottom: 10px;
-      vertical-align: middle;
-   }
-      .candidate-box .color-key{
-         width: 20px;
-         height: 20px;
-         background-color: white;
-         border-color: black;
-         border-width: 1px;
-         border-style: solid;
-         display: inline-block;
-         margin-right: 10px;}
-      .candidate-box p{
-         line-height: 20px;
-         vertical-align: middle;}
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+th, td, .default.text, i{
+  font-size: 1.4em;
+}
+
+.info i{
+  font-size: 1.6em;
+  margin-right: .2em;
+  color: rgba(0,0,0,0.85)
+}
+
+.ui.buttons{
+  margin-bottom: 20px;
+}
+
+.ui.buttons button.ui.button{
+  font-size: 1.2rem;
+}
+
+.off-color .ui.basic.buttons button.ui.button{
+  background-color: white !important;
+} 
+
+.off-color .ui.basic.buttons button.ui.button.active{
+  background-color: rgba(0,0,0,.05) !important;
+} 
+
+
+.ui.basic.buttons button.ui.button:hover{
+  opacity: .5;
+} 
+
+
+nav{
+  background-color: #222;
+  height: 50px;
+}
+
+body{
+  font-size: inherit;
+  margin: 0;
+}
+
+
+.row{ 
+  padding-bottom: 4em;
+}
+
+.hide{
+  display: none !important;
+}
+
+.dropped-out{
+  opacity: 0.5;
+  
+}
+
+.add-padding-top{
+  padding-top: 3.0em;
+}
+
+.container{
+  max-width: 1080px;   
+}
+
+.off-color{
+  background-color: #f0f0f0; 
+}
+ 
+
+.iframe{
+  margin: 0 auto;
+}
+
+
+.map-type{
+  text-align: center;
+  margin-top: -20px;
+}
+
+.ui.dropdown{
+  min-height: auto !important;
+  display: inline-block;
+  
+}
+
+.ui.dropdown .menu > .item{
+  font-size: 1.4em;
+}
+
+.ui.selection.dropdown .menu{
+  width: 100%;
+  min-width: 100%;
+}
+
+
+.card-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.card {
+  width: 27em;
+  background-color: white;
+  border-radius: 0.2em;
+  margin: 1.0em;
+  color: #666;
+  height: auto;
+  padding-bottom: 0.1em;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  display: inline-block;
+  border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5,0 0 0 1px #d4d4d5;
+    -webkit-transition: box-shadow .1s ease,-webkit-transform .1s ease;
+    transition: box-shadow .1s ease,transform .1s ease;
+    z-index: '';
+}
+
+.card .banner img {
+  width: 100%;
+}
+
+.card .portrait {
+  width: 33%;
+  margin: 0 auto;
+  margin-top: -18%;
+  margin-bottom: 2%;
+}
+
+.card .portrait img {
+  width: 100%;
+  border-radius: 50%;
+  border-width: 0.5em;
+  border-style: solid;
+  border-color: white;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  outline: 0;
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.12), 0 0.2em 0.4em rgba(0, 0, 0, 0.24);
+}
+
+.info {
+  text-align: center;
+
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.info h2 {
+  color: #444;
+}
+
+.info h5,
+.info h4 {
+  margin: 0em 0 0em 0;
+      font-size: 2.4rem;
+    font-weight: 700;
+    color: rgba(0,0,0,.85);
+}
+
+.info header {
+  margin-bottom: 0.3em;
+  font-size: 1.4em;
+}
+
+.progressbar span{
+  font-size: 1.4em;
+} 
+
+
+
+.info a {
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+.info section {
+  margin-bottom: 2.5em;
+}
+
+.progressbar {
+  height: 2.5em;
+  background-color: #C9C9C9;
+  position: relative;
+  border-radius: .28571429rem;
+}
+
+.remaining {
+  background-color: rgba(53, 144, 231, 1);
+  color: white;
+  padding: 0.2em;
+  font-weight: 700;
+  letter-spacing: 1.5;
+  overflow: hidden;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  white-space: nowrap;
+  padding-left: 2em;
+  width: 0em;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  padding: 0.2em;
+  font-weight: 700;
+  text-align: left;
+  z-index: 0;
+  padding-left: 2em;
+}
+
+.delegates header {
+  margin-bottom: .3em;
+  color: #444;
+}
+
+.delegates .group {
+  margin-bottom: 1em;
+}
+
+
+
+.ui-slider-horizontal .ui-slider-handle:focus{
+  outline: none;
+}
+
+
+.ui-slider-horizontal .ui-slider-handle {
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  border: none;
+  border-radius: 5em;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  -webkit-transition: box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+  transition: box-shadow 0.1s ease, transform 0.1s ease;
+  top: 0em;
+  width: 40px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 0.8em;
+  color: white;
+  background: none;
+  background: #ffffff -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+  background: #ffffff linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+  border: none;
+  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), 0px 0px 0px 1px rgba(34, 36, 38, 0.15) inset;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.background-blue{
+  background-color: rgba(53, 144, 231, 0.55)
+}
+
+.ui-widget-header{
+  background: none;
+  background-color: rgba(53, 144, 231, 0.55) !important;
+  width: 55.5556%;
+  border-radius: 500rem;
+}
+
+.slider {
+
+  border: none;
+  height: 20px;
+  border-radius: .28571429rem;
+/*  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  -webkit-transition: box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+  transition: box-shadow 0.1s ease, transform 0.1s ease;*/
+  z-index: 0;
+   width: -moz-calc(100% - 30px); /* Firefox 4+ */
+  width: calc(100%); /*
+  IE9+ and future browsers */
+  margin-bottom: 15px;
+  margin-top: 5px;
+  background: rgba(0, 0, 0, 0.05);
+  height: 1.5rem;
+  border-radius: 500rem;
+}
+
+
+.percentage, .amount{
+  display: inline-block;
+  width: 30px;
+}
+
+.amount {
+    text-align: left;
+    margin-right: 5px;
+}
+
+.ui.table td.active, .ui.table tr.active{  
+  border-width: 0px;
+  border-left-width: 5px;
+  border-style: solid;
+  border-color: purple;
+  background: rgba(224, 224, 224, .3)!important;
+
+}

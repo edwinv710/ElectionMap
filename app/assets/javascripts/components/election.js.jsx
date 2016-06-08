@@ -5,8 +5,8 @@ var ElectionContainer = React.createClass({
       return { 
          mapStore: electionConductor.mapStore,
          candidateStore: electionConductor.candidateStore,
-         contestStore: electionConductor.contestStore,
-         activeState: "NY"
+         activeState: "NY",
+         tableStore: electionConductor.tableStore
       };
    },
 
@@ -14,8 +14,8 @@ var ElectionContainer = React.createClass({
         electionConductor.setUpdate(this, this.setState)  
    },
 
-   componentDidMount() {
-       electionConductor.createMap()  
+   createMap: function(callback){
+    electionConductor.createMap();
    },
 
    updateResults: function(state, candidate, value){
@@ -23,14 +23,13 @@ var ElectionContainer = React.createClass({
    },
 
    render: function() {
-            // console.log(this.state.contestStore[this.state.activeState])
 
       return (
 
          <div className="mContainer">
-            <CandidateList candidateStore={this.state.candidateStore} />
-            <MapDisplay mapStore={this.state.mapStore} />
-            <ContestBox contestStore={this.state.contestStore[this.state.activeState]} activeState={this.state.activeState} updateResults={this.updateResults} /> 
+            <CandidateCardsSection candidateStore={this.state.candidateStore} delegatesNeeded={electionConductor.delegatesNeeded} totalSuperDelegates={electionConductor.totalSuperDelegates}/>
+            <ElectionMapSection mapStore={this.state.mapStore} createMap={this.createMap}/>
+            <ContestTableSection tableStore={this.state.tableStore} updateResults={this.updateResults} />
          </div>
       )
    }
