@@ -23,7 +23,11 @@ class Election < ApplicationRecord
    end
 
    def candidates_with_delegate_count
-      self.candidates.include_delegate_count.participating_in_election(self.id)
+      self.candidates.participating_in_election(self.id)
+   end
+
+   def friendly_path
+      name.split(" ").join("-")
    end
 
    def self.find_by_friendly_url_path(path)

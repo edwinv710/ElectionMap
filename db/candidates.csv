@@ -14,3 +14,5 @@ id,first_name,last_name,affiliation,status
 13,Rick,Santorum,Republican,inactive
 14,Rand,Paul,Republican,inactive
 15,Mike,Huckabee,Republican,inactive
+16,Gary,Johnson,Libertarian,active
+17,Jill,Stein,Green,active

@@ -1,0 +1,52 @@
+id,state_name,state_symbol,state_id,date,number_delegates,rule,contest_type
+1,Alabama,AL,1,11/08/16,9,all,primary
+2,Alaska,AK,2,11/08/16,3,all,primary
+3,Arizona,AZ,4,11/08/16,11,all,primary
+4,Arkansas,AR,5,11/08/16,6,all,primary
+5,California,CA,6,11/08/16,55,all,primary
+6,Colorado,CO,7,11/08/16,9,all,primary
+7,Connecticut,CT,8,11/08/16,7,all,primary
+8,Delaware,DE,9,11/08/16,3,all,primary
+9,Washington DC, DC,11,11/08/16,3,all,primary
+10,Florida,FL,12,11/08/16,29,all,primary
+11,Georgia,GA,13,11/08/16,16,all,primary
+12,Hawaii,HI,15,11/08/16,4,all,primary
+13,Idaho,ID,16,11/08/16,4,all,primary
+14,Illinois,IL,17,11/08/16,20,all,primary
+15,Indiana,IN,18,11/08/16,11,all,primary
+16,Iowa,IA,19,11/08/16,6,all,primary
+17,Kansas,KS,20,11/08/16,6,all,primary
+18,Kentucky,KY,21,11/08/16,8,all,primary
+19,Louisiana,LA,22,11/08/16,8,all,primary
+20,Maine,ME,23,11/08/16,4,all,primary
+21,Maryland,MD,24,11/08/16,10,all,primary
+22,Massachusetts,MA,25,11/08/16,11,all,primary
+23,Michigan,MI,26,11/08/16,16,all,primary
+24,Minnesota,MN,27,11/08/16,10,all,primary
+25,Mississippi,MS,28,11/08/16,6,all,primary
+26,Missouri,MO,29,11/08/16,10,all,primary
+27,Montana,MT,30,11/08/16,3,all,primary
+28,Nebraska,NE,31,11/08/16,5,all,primary
+29,Nevada,NV,32,11/08/16,6,all,primary
+30,New Hampshire,NH,33,11/08/16,4,all,primary
+31,New Jersey,NJ,34,11/08/16,14,all,primary
+32,New Mexico,NM,35,11/08/16,5,all,primary
+33,New York,NY,36,11/08/16,29,all,primary
+34,North Carolina,NC,37,11/08/16,15,all,primary
+35,North Dakota,ND,38,11/08/16,3,all,primary
+36,Ohio,OH,40,11/08/16,18,all,primary
+37,Oklahoma,OK,41,11/08/16,7,all,primary
+38,Oregon,OR,42,11/08/16,7,all,primary
+39,Pennsylvania,PA,43,11/08/16,20,all,primary
+40,Rhode Island,RI,45,11/08/16,4,all,primary
+41,South Carolina,SC,46,11/08/16,9,all,primary
+42,South Dakota,SD,47,11/08/16,3,all,primary
+43,Tennessee,TN,48,11/08/16,11,all,primary
+44,Texas,TX,49,11/08/16,38,all,primary
+45,Utah,UT,50,11/08/16,6,all,primary
+46,Vermont,VT,51,11/08/16,3,all,primary
+47,Virginia,VA,53,11/08/16,13,all,primary
+48,Washington,WA,54,11/08/16,12,all,primary
+49,West Virginia,WV,55,11/08/16,5,all,primary
+50,Wisconsin,WI,56,11/08/16,10,all,primary
+51,Wyoming,WY,57,11/08/16,3,all,primary

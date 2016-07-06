@@ -1,34 +1,76 @@
 var Election = function(election){
 
-   var name = election.name;
    var processType = election.processType;
    var affiliation = election.affiliation;
    var delegatesNeeded = election.delegatesNeeded;
    var candidates = [];
    var contests = [];
+   var userContestCode;
    
    var candidateIdToIndex = {};
 
-   (function setCandidates(){
+   function getParameterByName(name, url) {
+       if (!url) url = window.location.href;
+       name = name.replace(/[\[\]]/g, "\\$&");
+       var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+           results = regex.exec(url);
+       if (!results) return null;
+       if (!results[2]) return '';
+       return decodeURIComponent(results[2].replace(/\+/g, " "));
+   }
+
+   function setCandidates(){
       candidates = election.candidates.map(function(candidate, index){
          candidateIdToIndex[candidate.id.toString()] = index;
          return Candidate(candidate, index);
       });
-   })();
+   }
 
-   (function setContest(){
+   function setContests(){
       contests = election.contests.map(function(contest){
          return Contest(contest); 
       });
-   })();
+   }
 
-   var getCandidateByID = function(id){
-      var returnedCandidate = null;
-      candidates.some(function(candidate, index, array){
-         if(candidate.id === parseInt(id)) returnedCandidate = candidate;
-         return (candidate.id === parseInt(id))
+   function createUserContests(){
+      var param = getParameterByName("val");
+      var contestIndex = contests.findIndex(function(c){ return c.isComplete === false; });
+      var availableContests = contests.slice(contestIndex);
+      var availableCandidates = candidates.filter(function(candidate){
+         return (!candidate.lastCompetitiveDate || (candidate.lastCompetitiveDate > contests[contestIndex].date));
       });
-      return returnedCandidate;
+
+      if(param){
+         userContestCode = UserContestCode(availableContests, availableCandidates, param)
+         userContestCode.contestCodes.forEach(function(codeObject, index){
+          var values = codeObject.values;
+            for(var i = 0; i < values.length; i++){
+               availableCandidates[i].pledgedDelegateCount += values[i];
+               availableContests[index].update(availableCandidates[i].id, values[i]);
+            }
+         });
+       }else{
+         userContestCode = UserContestCode(availableContests, availableCandidates)
+       }
+   }
+
+   var updateCandidates = function(prevValues, currentValues){
+      candidates.forEach(function(c){
+         var currentValue = currentValues[c.id.toString()];
+         var prevValue = prevValues[c.id.toString()];         
+         if(currentValue != undefined){
+            var difference = currentValue - (prevValue || 0);
+            c.pledgedDelegateCount =  c.pledgedDelegateCount + difference;
+         }
+      });
+   }
+
+   var getDelegateCountMap = function(contest){
+      var delegateMap = {};
+      contest.results.forEach(function(r){
+         if(r.delegateType === "user") delegateMap[r.candidateId.toString()] = (delegateMap[r.candidateId.toString()] || 0) + r.delegateCount;
+      });
+      return delegateMap;
    }
 
    var update = function(state, candidate, value){
@@ -37,44 +79,23 @@ var Election = function(election){
       });
       if(contest){
          var rule = contest.rule;
-         var previousValues =  {};
-         var currentValues = {};
-         contest.results.forEach(function(r){
-            console.log("Before type: "+r.delegateType);
-            if(r.delegateType === "user"){
-               previousValues[r.candidateId.toString()] = (previousValues[r.candidateId.toString()] || 0) + r.delegateCount;
-            }
-         });
-         var updatedContestResults = contest.update(candidate, value);
-         contest.results.forEach(function(r){
-            console.log("After type: "+r.delegateType);
-            if(r.delegateType === "user"){
-               currentValues[r.candidateId.toString()] = (currentValues[r.candidateId.toString()] || 0) + r.delegateCount;
-            }
-         });
-
-         
+         var previousValues = getDelegateCountMap(contest);
+         contest.update(candidate, value);
+         var currentValues = getDelegateCountMap(contest);
          updateCandidates(previousValues, currentValues);
-         return updatedContestResults;
+         userContestCode.update(contest, candidate, value)
       }
-      return [-1, 0];
    }
 
-   var updateCandidates = function(prevValues, currentValues){
-      candidates.forEach(function(c){
-         var currentValue = currentValues[c.id.toString()];
-         var prevValue = prevValues[c.id.toString()];
-         console.log(c.id+" had "+prevValue+" but now has "+currentValue);
-         
-         if(currentValue != undefined){
-            var difference = currentValue - (prevValue || 0);
-            console.log("The difference is "+difference)
-            c.pledgedDelegateCount =  c.pledgedDelegateCount + difference;
-         }
-      });
-   }
+
+   setCandidates();
+   setContests();
+   createUserContests();
+
+   
 
    return {
+      name: election.name,
       contests: contests,
       candidates: candidates,
       candidateIdToIndex: candidateIdToIndex,

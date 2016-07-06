@@ -13,8 +13,6 @@ ContestStore = function(election) {
    };
 
    var update = function(state, candidateId, value){
-      console.log("ID: "+candidateId.toString());
-      console.log("Results "+JSON>stringify(data[state].results));
       data[state].results[candidateId.toString()].delegateCount = value;
    };
 

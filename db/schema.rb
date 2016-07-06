@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160527094034) do
+ActiveRecord::Schema.define(version: 20160705010538) do
 
   create_table "candidates", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.integer  "party_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.string   "affiliation"
     t.integer  "status"
     t.string   "image_url"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160527094034) do
     t.string   "description"
     t.string   "website_url"
     t.datetime "last_competitive_date"
+    t.boolean  "is_shown",              default: true
   end
 
   create_table "candidates_elections", id: false, force: :cascade do |t|

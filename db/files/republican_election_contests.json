@@ -1,0 +1,562 @@
+[
+  {
+    "id": 1,
+    "state_name": "Alabama",
+    "state_symbol": "AL",
+    "state_id": 1,
+    "date": "03/01/2016",
+    "contest_type": "primary",
+    "number_delegates": 50,
+    "rule": "winner"
+  },
+  {
+    "id": 2,
+    "state_name": "Alaska",
+    "state_symbol": "AK",
+    "state_id": 2,
+    "date": "03/01/2016",
+    "contest_type": "caucus",
+    "number_delegates": 28,
+    "rule": "proportional"
+  },
+  {
+    "id": 3,
+    "state_name": "American Samoa",
+    "state_symbol": "AS",
+    "state_id": 3,
+    "date": "03/22/2016",
+    "contest_type": "caucus",
+    "number_delegates": 9,
+    "rule": 0
+  },
+  {
+    "id": 4,
+    "state_name": "Arizona",
+    "state_symbol": "AZ",
+    "state_id": 4,
+    "date": "03/22/2016",
+    "contest_type": "primary",
+    "number_delegates": 58,
+    "rule": "winner"
+  },
+  {
+    "id": 5,
+    "state_name": "Arkansas",
+    "state_symbol": "AR",
+    "state_id": 5,
+    "date": "03/01/2016",
+    "contest_type": "primary",
+    "number_delegates": 40,
+    "rule": "winner"
+  },
+  {
+    "id": 6,
+    "state_name": "California",
+    "state_symbol": "CA",
+    "state_id": 6,
+    "date": "06/07/2016",
+    "contest_type": "primary",
+    "number_delegates": 172,
+    "rule": "winner"
+  },
+  {
+    "id": 7,
+    "state_name": "Colorado",
+    "state_symbol": "CO",
+    "state_id": 7,
+    "date": "03/01/2016",
+    "contest_type": "caucus",
+    "number_delegates": 37,
+    "rule": 0
+  },
+  {
+    "id": 8,
+    "state_name": "Connecticut",
+    "state_symbol": "CT",
+    "state_id": 8,
+    "date": "04/26/2016",
+    "contest_type": "primary",
+    "number_delegates": 28,
+    "rule": "winner"
+  },
+  {
+    "id": 9,
+    "state_name": "Delaware",
+    "state_symbol": "DE",
+    "state_id": 9,
+    "date": "04/26/2016",
+    "contest_type": "primary",
+    "number_delegates": 16,
+    "rule": "winner"
+  },
+  {
+    "id": 10,
+    "state_name": "Washington DC",
+    "state_symbol": "DC",
+    "state_id": 11,
+    "date": "03/12/2016",
+    "contest_type": "convention",
+    "number_delegates": 19,
+    "rule": "winner"
+  },
+  {
+    "id": 11,
+    "state_name": "Florida",
+    "state_symbol": "FL",
+    "state_id": 12,
+    "date": "03/15/2016",
+    "contest_type": "primary",
+    "number_delegates": 99,
+    "rule": "winner"
+  },
+  {
+    "id": 12,
+    "state_name": "Georgia",
+    "state_symbol": "GA",
+    "state_id": 13,
+    "date": "03/01/2016",
+    "contest_type": "primary",
+    "number_delegates": 76,
+    "rule": "winner"
+  },
+  {
+    "id": 13,
+    "state_name": "Guam",
+    "state_symbol": "GU",
+    "state_id": 14,
+    "date": "03/12/2016",
+    "contest_type": "caucus",
+    "number_delegates": 9,
+    "rule": 0
+  },
+  {
+    "id": 14,
+    "state_name": "Hawaii",
+    "state_symbol": "HI",
+    "state_id": 15,
+    "date": "03/08/2016",
+    "contest_type": "caucus",
+    "number_delegates": 19,
+    "rule": "proportional"
+  },
+  {
+    "id": 15,
+    "state_name": "Idaho",
+    "state_symbol": "ID",
+    "state_id": 16,
+    "date": "03/08/2016",
+    "contest_type": "primary",
+    "number_delegates": 32,
+    "rule": "winner"
+  },
+  {
+    "id": 16,
+    "state_name": "Illinois",
+    "state_symbol": "IL",
+    "state_id": 17,
+    "date": "03/15/2016",
+    "contest_type": "primary",
+    "number_delegates": 69,
+    "rule": "winner"
+  },
+  {
+    "id": 17,
+    "state_name": "Indiana",
+    "state_symbol": "IN",
+    "state_id": 18,
+    "date": "05/03/2016",
+    "contest_type": "primary",
+    "number_delegates": 57,
+    "rule": "winner"
+  },
+  {
+    "id": 18,
+    "state_name": "Iowa",
+    "state_symbol": "IA",
+    "state_id": 19,
+    "date": "02/01/2016",
+    "contest_type": "caucus",
+    "number_delegates": 30,
+    "rule": "proportional"
+  },
+  {
+    "id": 19,
+    "state_name": "Kansas",
+    "state_symbol": "KS",
+    "state_id": 20,
+    "date": "03/05/2016",
+    "contest_type": "caucus",
+    "number_delegates": 40,
+    "rule": "proportional"
+  },
+  {
+    "id": 20,
+    "state_name": "Kentucky",
+    "state_symbol": "KY",
+    "state_id": 21,
+    "date": "03/05/2016",
+    "contest_type": "caucus",
+    "number_delegates": 46,
+    "rule": "proportional"
+  },
+  {
+    "id": 21,
+    "state_name": "Louisiana",
+    "state_symbol": "LA",
+    "state_id": 22,
+    "date": "03/05/2016",
+    "contest_type": "primary",
+    "number_delegates": 46,
+    "rule": "proportional"
+  },
+  {
+    "id": 22,
+    "state_name": "Maine",
+    "state_symbol": "ME",
+    "state_id": 23,
+    "date": "03/05/2016",
+    "contest_type": "caucus",
+    "number_delegates": 23,
+    "rule": "winner"
+  },
+  {
+    "id": 23,
+    "state_name": "Maryland",
+    "state_symbol": "MD",
+    "state_id": 24,
+    "date": "04/26/2016",
+    "contest_type": "primary",
+    "number_delegates": 38,
+    "rule": "winner"
+  },
+  {
+    "id": 24,
+    "state_name": "Massachusetts",
+    "state_symbol": "MA",
+    "state_id": 25,
+    "date": "03/01/2016",
+    "contest_type": "primary",
+    "number_delegates": 42,
+    "rule": "proportional"
+  },
+  {
+    "id": 25,
+    "state_name": "Michigan",
+    "state_symbol": "MI",
+    "state_id": 26,
+    "date": "03/08/2016",
+    "contest_type": "primary",
+    "number_delegates": 59,
+    "rule": "winner"
+  },
+  {
+    "id": 26,
+    "state_name": "Minnesota",
+    "state_symbol": "MN",
+    "state_id": 27,
+    "date": "03/01/2016",
+    "contest_type": "caucus",
+    "number_delegates": 38,
+    "rule": "proportional"
+  },
+  {
+    "id": 27,
+    "state_name": "Mississippi",
+    "state_symbol": "MS",
+    "state_id": 28,
+    "date": "03/08/2016",
+    "contest_type": "primary",
+    "number_delegates": 40,
+    "rule": "proportional"
+  },
+  {
+    "id": 28,
+    "state_name": "Missouri",
+    "state_symbol": "MO",
+    "state_id": 29,
+    "date": "03/15/2016",
+    "contest_type": "primary",
+    "number_delegates": 52,
+    "rule": "winner"
+  },
+  {
+    "id": 29,
+    "state_name": "Montana",
+    "state_symbol": "MT",
+    "state_id": 30,
+    "date": "06/07/2016",
+    "contest_type": "primary",
+    "number_delegates": 27,
+    "rule": "winner"
+  },
+  {
+    "id": 30,
+    "state_name": "Nebraska",
+    "state_symbol": "NE",
+    "state_id": 31,
+    "date": "05/10/2016",
+    "contest_type": "primary",
+    "number_delegates": 36,
+    "rule": "winner"
+  },
+  {
+    "id": 31,
+    "state_name": "Nevada",
+    "state_symbol": "NV",
+    "state_id": 32,
+    "date": "02/23/2016",
+    "contest_type": "caucus",
+    "number_delegates": 30,
+    "rule": "proportional"
+  },
+  {
+    "id": 32,
+    "state_name": "New Hampshire",
+    "state_symbol": "NH",
+    "state_id": 33,
+    "date": "02/09/2016",
+    "contest_type": "primary",
+    "number_delegates": 23,
+    "rule": "proportional"
+  },
+  {
+    "id": 33,
+    "state_name": "New Jersey",
+    "state_symbol": "NJ",
+    "state_id": 34,
+    "date": "06/07/2016",
+    "contest_type": "primary",
+    "number_delegates": 51,
+    "rule": "winner"
+  },
+  {
+    "id": 34,
+    "state_name": "New Mexico",
+    "state_symbol": "NM",
+    "state_id": 35,
+    "date": "06/07/2016",
+    "contest_type": "primary",
+    "number_delegates": 24,
+    "rule": "proportional"
+  },
+  {
+    "id": 35,
+    "state_name": "New York",
+    "state_symbol": "NY",
+    "state_id": 36,
+    "date": "04/19/2016",
+    "contest_type": "primary",
+    "number_delegates": 95,
+    "rule": "winner"
+  },
+  {
+    "id": 36,
+    "state_name": "North Carolina",
+    "state_symbol": "NC",
+    "state_id": 37,
+    "date": "03/15/2016",
+    "contest_type": "primary",
+    "number_delegates": 72,
+    "rule": "proportional"
+  },
+  {
+    "id": 37,
+    "state_name": "North Dakota",
+    "state_symbol": "ND",
+    "state_id": 38,
+    "date": "04/13/2016",
+    "contest_type": "caucus",
+    "number_delegates": 28,
+    "rule": 0
+  },
+  {
+    "id": 38,
+    "state_name": "Northern Marianas",
+    "state_symbol": "NA",
+    "state_id": 39,
+    "date": "03/15/2016",
+    "contest_type": "caucus",
+    "number_delegates": 9,
+    "rule": "winner"
+  },
+  {
+    "id": 39,
+    "state_name": "Ohio",
+    "state_symbol": "OH",
+    "state_id": 40,
+    "date": "03/15/2016",
+    "contest_type": "primary",
+    "number_delegates": 66,
+    "rule": "winner"
+  },
+  {
+    "id": 40,
+    "state_name": "Oklahoma",
+    "state_symbol": "OK",
+    "state_id": 41,
+    "date": "03/01/2016",
+    "contest_type": "primary",
+    "number_delegates": 43,
+    "rule": "winner"
+  },
+  {
+    "id": 41,
+    "state_name": "Oregon",
+    "state_symbol": "OR",
+    "state_id": 42,
+    "date": "05/17/2016",
+    "contest_type": "primary",
+    "number_delegates": 28,
+    "rule": "proportional"
+  },
+  {
+    "id": 42,
+    "state_name": "Pennsylvania",
+    "state_symbol": "PA",
+    "state_id": 43,
+    "date": "04/26/2016",
+    "contest_type": "primary",
+    "number_delegates": 71,
+    "rule": "winner"
+  },
+  {
+    "id": 43,
+    "state_name": "Puerto Rico",
+    "state_symbol": "PR",
+    "state_id": 44,
+    "date": "03/06/2016",
+    "contest_type": "primary",
+    "number_delegates": 23,
+    "rule": "winner"
+  },
+  {
+    "id": 44,
+    "state_name": "Rhode Island",
+    "state_symbol": "RI",
+    "state_id": 45,
+    "date": "04/26/2016",
+    "contest_type": "primary",
+    "number_delegates": 19,
+    "rule": "proportional"
+  },
+  {
+    "id": 45,
+    "state_name": "South Carolina",
+    "state_symbol": "SC",
+    "state_id": 46,
+    "date": "02/20/2016",
+    "contest_type": "primary",
+    "number_delegates": 50,
+    "rule": "winner"
+  },
+  {
+    "id": 46,
+    "state_name": "South Dakota",
+    "state_symbol": "SD",
+    "state_id": 47,
+    "date": "06/07/2016",
+    "contest_type": "primary",
+    "number_delegates": 29,
+    "rule": "winner"
+  },
+  {
+    "id": 47,
+    "state_name": "Tennessee",
+    "state_symbol": "TN",
+    "state_id": 48,
+    "date": "03/01/2016",
+    "contest_type": "primary",
+    "number_delegates": 58,
+    "rule": "winner"
+  },
+  {
+    "id": 48,
+    "state_name": "Texas",
+    "state_symbol": "TX",
+    "state_id": 49,
+    "date": "03/01/2016",
+    "contest_type": "primary",
+    "number_delegates": 155,
+    "rule": "winner"
+  },
+  {
+    "id": 49,
+    "state_name": "Virgin Islands",
+    "state_symbol": "VI",
+    "state_id": 52,
+    "date": "03/10/2016",
+    "contest_type": "caucus",
+    "number_delegates": 9,
+    "rule": 0
+  },
+  {
+    "id": 50,
+    "state_name": "Utah",
+    "state_symbol": "UT",
+    "state_id": 50,
+    "date": "03/22/2016",
+    "contest_type": "caucus",
+    "number_delegates": 40,
+    "rule": "winner"
+  },
+  {
+    "id": 51,
+    "state_name": "Vermont",
+    "state_symbol": "VT",
+    "state_id": 51,
+    "date": "03/01/2016",
+    "contest_type": "primary",
+    "number_delegates": 16,
+    "rule": "winner"
+  },
+  {
+    "id": 52,
+    "state_name": "Virginia",
+    "state_symbol": "VA",
+    "state_id": 53,
+    "date": "03/01/2016",
+    "contest_type": "primary",
+    "number_delegates": 49,
+    "rule": "proportional"
+  },
+  {
+    "id": 53,
+    "state_name": "Washington",
+    "state_symbol": "WA",
+    "state_id": 54,
+    "date": "05/24/2016",
+    "contest_type": "primary",
+    "number_delegates": 44,
+    "rule": "proportional"
+  },
+  {
+    "id": 54,
+    "state_name": "West Virginia",
+    "state_symbol": "WV",
+    "state_id": 55,
+    "date": "05/10/2016",
+    "contest_type": "primary",
+    "number_delegates": 34,
+    "rule": 0
+  },
+  {
+    "id": 55,
+    "state_name": "Wisconsin",
+    "state_symbol": "WI",
+    "state_id": 56,
+    "date": "04/05/2016",
+    "contest_type": "primary",
+    "number_delegates": 42,
+    "rule": "winner"
+  },
+  {
+    "id": 56,
+    "state_name": "Wyoming",
+    "state_symbol": "WY",
+    "state_id": 57,
+    "date": "03/01/2016",
+    "contest_type": "caucus",
+    "number_delegates": 29,
+    "rule": 0
+  }
+]

@@ -7,40 +7,93 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>ElectionMap</title>
     <%= include_gon %>
-    <%= csrf_meta_tags %>
-    <%= action_cable_meta_tag %>
-
-    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
-    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.css">
-    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/transition.min.css">
-    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/table.min.css">
-    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/button.min.css">
-    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js" type="text/javascript"></script>
-    <script src="http://underscorejs.org/underscore-min.js" type="text/javascript"></script>
-    <script src="http://res.cloudinary.com/dqacnk0ea/raw/upload/electionmap/js/raphael.js" type="text/javascript"></script>
-    <script src="http://res.cloudinary.com/dqacnk0ea/raw/upload/electionmap/js/scale.raphael.js" type="text/javascript"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/checkbox.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/transition.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/segment.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/header.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/checkbox.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <%= stylesheet_link_tag    'application', media: 'all'%>
-    <%= javascript_include_tag 'application' %>
+      <%= csrf_meta_tags %>
+        <%= action_cable_meta_tag %>
+          <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+          <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+          <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.css">
+          <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/transition.min.css">
+          <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+          <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/table.min.css">
+          <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/button.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/popup.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/segment.min.css">
+          <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/sidebar.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/menu.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/menu.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/segment.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/header.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/checkbox.css">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js" type="text/javascript"></script>
+          <script src="http://underscorejs.org/underscore-min.js" type="text/javascript"></script>
+          <script src="http://res.cloudinary.com/dqacnk0ea/raw/upload/electionmap/js/raphael.js" type="text/javascript"></script>
+          <script src="http://res.cloudinary.com/dqacnk0ea/raw/upload/electionmap/js/scale.raphael.js" type="text/javascript"></script>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/sidebar.js"></script>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/checkbox.js"></script>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/popup.js"></script>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/transition.js" type="text/javascript"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.js" type="text/javascript"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+          <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+          <!-- Latest compiled and minified CSS -->
+          <%= stylesheet_link_tag    'application', media: 'all'%>
+            <%= javascript_include_tag 'application' %>
   </head>
+  <body class="segment pushable">
 
-  <body>
-    <%= yield %>
+    <div class="ui vertical labeled icon left inverted sidebar menu left overlay">
+      <div class="item header">
+         <span> Menu </span>
+      </div> 
+      <div class="item body">
+          <div class="header"> Elections </div>
+          <div class="menu">
+          <% Election.all.each do |election| %>
+            <a class="item" href=<%= "#{request.base_url}/elections/#{election.friendly_path}"%> style="font-size: 1.2rem;">
+              <%= election.name %>
+            </a>
+          <% end %>
+          </div>
+      </div>  
+    </div>
+
+
+    <div class="ui bottom attached  pusher">
+    <div class="row" style="border-bottom: 1px solid #d4d4d5;padding-bottom: 0px;">
+    <div class="container">
+      <div class="ui top attached demo menu " style="padding-left: 0%; padding-right: 0%; border: none">
+         <div class="item" style="width: 1px; padding: 0px;"></div>
+        <a class="item sidebar">
+           <i class="fa fa-bars  " aria-hidden="true" style="font-size: 22px"></i> 
+        </a>
+        <div class="item" style="width: 5rem;">
+          <img src="/map32.jpg" style="width: 100%;">
+        </div>
+        <div class="item" style="font-size: 1.8rem">
+          <%= @election.name %>
+        </div>
+      </div>
+    </div>
+    </div>
+      <%= yield %>
     <!-- Latest compiled and minified JavaScript -->
+    </div>
+
+    <div class="ui black inverted vertical footer segment">
+      <div class="container">
+        <p> Hello </p>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/sidebar.js"></script>
+    <script>
+    $(document).ready(function() {
+      $('.ui.sidebar').sidebar('attach events', '.menu .item.sidebar');
+    })
+    </script>
   </body>
 
 </html>

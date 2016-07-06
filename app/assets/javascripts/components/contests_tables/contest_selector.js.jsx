@@ -2,7 +2,6 @@ var ContestSelector = React.createClass({
 
   setWinner: function(){
     var turnOn = !this.props.turnOn;
-    console.log("Is this being turned on? "+turnOn)
     this.props.setWinner(turnOn);
   },
 

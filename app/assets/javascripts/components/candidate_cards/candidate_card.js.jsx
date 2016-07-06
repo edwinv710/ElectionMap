@@ -1,8 +1,23 @@
 var CandidateCard = React.createClass({
 
+  displayCornerRibbons: function(){
+    if(this.props.candidate.pledgedDelegateCount > this.props.delegatesNeeded){
+      return(
+        <CornerRibbon message="Winner!" color={this.props.candidate.rgba(1).toString()} />
+      )
+    }else if(this.props.candidate.pledgedDelegateCount > ((((this.props.delegatesNeeded - 1) * 2) - this.props.totalSuperDelegates)/2)){
+      return(
+        <CornerRibbon message="Most Pledged Delegates!" multiline={true} color={this.props.candidate.rgba(1).toString()} />
+      )
+    }
+
+  },
+
   render: function() {
+   var displayCornerRibbons = displayCornerRibbons;
    return (
     <div className="card" style={this.props.candidate.style}>
+      {this.displayCornerRibbons()}
       <div className="card-header">
         <div className="banner">
           <img src={this.props.candidate.bannerUrl} />

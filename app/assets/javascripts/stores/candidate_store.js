@@ -8,9 +8,15 @@ CandidateStore = function(election) {
       });
    };
 
+   var sortByStatus = function(store){
+      store.sort(function(a, b){
+         return a.status - b.status;
+      });
+   };
+
    var sort = function(){
       sortCandidateStore(data);
-   }
+   };
 
    var find = function(candidate){
       return this.data.find(function(c){
@@ -20,8 +26,9 @@ CandidateStore = function(election) {
 
    var update = function(e){
        createCandidateStore(e);
+       
        sort();
-   }
+   };
 
 
    var createCandidateStore = function(e){
@@ -49,6 +56,7 @@ CandidateStore = function(election) {
 
    (function initialize() {
       createCandidateStore(election);
+      sortByStatus(data);
       sortCandidateStore(data);
    })();
 

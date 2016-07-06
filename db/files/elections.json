@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Democratic Primary",
+    "affiliation": "democrat",
+    "process_type": "general",
+    "year": 2016,
+    "delegates_needed": 2384,
+    "total_super_delegates": 715,
+    "candidates": [1, 2, 3]
+  },
+  {
+    "id": 2,
+    "name": "Republican Primary",
+    "affiliation": "republican",
+    "process_type": "general",
+    "year": 2016,
+    "delegates_needed": 1237,
+    "total_super_delegates": -1,
+    "candidates": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+  },
+  {
+    "id": 3,
+    "name": "General Election",
+    "affiliation": "general",
+    "process_type": "general",
+    "year": 2016,
+    "delegates_needed": 270,
+    "total_super_delegates": -1,
+    "candidates": [1, 6, 16, 17]
+  }
+]

@@ -1,0 +1,1142 @@
+[
+  {
+    "contest_id": 1,
+    "state_name": "Alabama",
+    "state_symbol": "AL",
+    "state_id": 1,
+    "candidate_id": 1,
+    "votes": 309071,
+    "pledged_delegates_count": 44,
+    "super_delegates_count": 4
+  },
+  {
+    "contest_id": 2,
+    "state_name": "Alaska",
+    "state_symbol": "AK",
+    "state_id": 2,
+    "candidate_id": 1,
+    "votes": 2146,
+    "pledged_delegates_count": 3,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 3,
+    "state_name": "American Samoa",
+    "state_symbol": "AS",
+    "state_id": 3,
+    "candidate_id": 1,
+    "votes": 162,
+    "pledged_delegates_count": 4,
+    "super_delegates_count": 4
+  },
+  {
+    "contest_id": 4,
+    "state_name": "Arizona",
+    "state_symbol": "AZ",
+    "state_id": 4,
+    "candidate_id": 1,
+    "votes": 262459,
+    "pledged_delegates_count": 42,
+    "super_delegates_count": 5
+  },
+  {
+    "contest_id": 5,
+    "state_name": "Arkansas",
+    "state_symbol": "AR",
+    "state_id": 5,
+    "candidate_id": 1,
+    "votes": 146057,
+    "pledged_delegates_count": 22,
+    "super_delegates_count": 5
+  },
+  {
+    "contest_id": 6,
+    "state_name": "California",
+    "state_symbol": "CA",
+    "state_id": 6,
+    "candidate_id": 1,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 52
+  },
+  {
+    "contest_id": 7,
+    "state_name": "Colorado",
+    "state_symbol": "CO",
+    "state_id": 7,
+    "candidate_id": 1,
+    "votes": 49789,
+    "pledged_delegates_count": 25,
+    "super_delegates_count": 9
+  },
+  {
+    "contest_id": 8,
+    "state_name": "Connecticut",
+    "state_symbol": "CT",
+    "state_id": 8,
+    "candidate_id": 1,
+    "votes": 170080,
+    "pledged_delegates_count": 28,
+    "super_delegates_count": 15
+  },
+  {
+    "contest_id": 9,
+    "state_name": "Delaware",
+    "state_symbol": "DE",
+    "state_id": 9,
+    "candidate_id": 1,
+    "votes": 55950,
+    "pledged_delegates_count": 12,
+    "super_delegates_count": 7
+  },
+  {
+    "contest_id": 10,
+    "state_name": "Democrats Abroad",
+    "state_symbol": "DA",
+    "state_id": 10,
+    "candidate_id": 1,
+    "votes": 10689,
+    "pledged_delegates_count": 4,
+    "super_delegates_count": 2
+  },
+  {
+    "contest_id": 11,
+    "state_name": "Washington DC",
+    "state_symbol": "DC",
+    "state_id": 11,
+    "candidate_id": 1,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 21
+  },
+  {
+    "contest_id": 12,
+    "state_name": "Florida",
+    "state_symbol": "FL",
+    "state_id": 12,
+    "candidate_id": 1,
+    "votes": 1101414,
+    "pledged_delegates_count": 141,
+    "super_delegates_count": 23
+  },
+  {
+    "contest_id": 13,
+    "state_name": "Georgia",
+    "state_symbol": "GA",
+    "state_id": 13,
+    "candidate_id": 1,
+    "votes": 543008,
+    "pledged_delegates_count": 73,
+    "super_delegates_count": 11
+  },
+  {
+    "contest_id": 14,
+    "state_name": "Guam",
+    "state_symbol": "GU",
+    "state_id": 14,
+    "candidate_id": 1,
+    "votes": 777,
+    "pledged_delegates_count": 4,
+    "super_delegates_count": 5
+  },
+  {
+    "contest_id": 15,
+    "state_name": "Hawaii",
+    "state_symbol": "HI",
+    "state_id": 15,
+    "candidate_id": 1,
+    "votes": 10125,
+    "pledged_delegates_count": 8,
+    "super_delegates_count": 6
+  },
+  {
+    "contest_id": 16,
+    "state_name": "Idaho",
+    "state_symbol": "ID",
+    "state_id": 16,
+    "candidate_id": 1,
+    "votes": 5065,
+    "pledged_delegates_count": 5,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 17,
+    "state_name": "Illinois",
+    "state_symbol": "IL",
+    "state_id": 17,
+    "candidate_id": 1,
+    "votes": 1039555,
+    "pledged_delegates_count": 79,
+    "super_delegates_count": 22
+  },
+  {
+    "contest_id": 18,
+    "state_name": "Indiana",
+    "state_symbol": "IN",
+    "state_id": 18,
+    "candidate_id": 1,
+    "votes": 303387,
+    "pledged_delegates_count": 39,
+    "super_delegates_count": 7
+  },
+  {
+    "contest_id": 19,
+    "state_name": "Iowa",
+    "state_symbol": "IA",
+    "state_id": 19,
+    "candidate_id": 1,
+    "votes": 701,
+    "pledged_delegates_count": 23,
+    "super_delegates_count": 7
+  },
+  {
+    "contest_id": 20,
+    "state_name": "Kansas",
+    "state_symbol": "KS",
+    "state_id": 20,
+    "candidate_id": 1,
+    "votes": 12593,
+    "pledged_delegates_count": 10,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 21,
+    "state_name": "Kentucky",
+    "state_symbol": "KY",
+    "state_id": 21,
+    "candidate_id": 1,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 2
+  },
+  {
+    "contest_id": 22,
+    "state_name": "Louisiana",
+    "state_symbol": "LA",
+    "state_id": 22,
+    "candidate_id": 1,
+    "votes": 221615,
+    "pledged_delegates_count": 37,
+    "super_delegates_count": 7
+  },
+  {
+    "contest_id": 23,
+    "state_name": "Maine",
+    "state_symbol": "ME",
+    "state_id": 23,
+    "candidate_id": 1,
+    "votes": 1232,
+    "pledged_delegates_count": 9,
+    "super_delegates_count": 3
+  },
+  {
+    "contest_id": 24,
+    "state_name": "Maryland",
+    "state_symbol": "MD",
+    "state_id": 24,
+    "candidate_id": 1,
+    "votes": 533661,
+    "pledged_delegates_count": 61,
+    "super_delegates_count": 16
+  },
+  {
+    "contest_id": 25,
+    "state_name": "Massachusetts",
+    "state_symbol": "MA",
+    "state_id": 25,
+    "candidate_id": 1,
+    "votes": 603784,
+    "pledged_delegates_count": 46,
+    "super_delegates_count": 16
+  },
+  {
+    "contest_id": 26,
+    "state_name": "Michigan",
+    "state_symbol": "MI",
+    "state_id": 26,
+    "candidate_id": 1,
+    "votes": 581775,
+    "pledged_delegates_count": 63,
+    "super_delegates_count": 10
+  },
+  {
+    "contest_id": 27,
+    "state_name": "Minnesota",
+    "state_symbol": "MN",
+    "state_id": 27,
+    "candidate_id": 1,
+    "votes": 73510,
+    "pledged_delegates_count": 31,
+    "super_delegates_count": 12
+  },
+  {
+    "contest_id": 28,
+    "state_name": "Mississippi",
+    "state_symbol": "MS",
+    "state_id": 28,
+    "candidate_id": 1,
+    "votes": 182447,
+    "pledged_delegates_count": 32,
+    "super_delegates_count": 3
+  },
+  {
+    "contest_id": 29,
+    "state_name": "Missouri",
+    "state_symbol": "MO",
+    "state_id": 29,
+    "candidate_id": 1,
+    "votes": 312285,
+    "pledged_delegates_count": 36,
+    "super_delegates_count": 13
+  },
+  {
+    "contest_id": 30,
+    "state_name": "Montana",
+    "state_symbol": "MT",
+    "state_id": 30,
+    "candidate_id": 1,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 31,
+    "state_name": "Nebraska",
+    "state_symbol": "NE",
+    "state_id": 31,
+    "candidate_id": 1,
+    "votes": 14340,
+    "pledged_delegates_count": 10,
+    "super_delegates_count": 3
+  },
+  {
+    "contest_id": 32,
+    "state_name": "Nevada",
+    "state_symbol": "NV",
+    "state_id": 32,
+    "candidate_id": 1,
+    "votes": 6316,
+    "pledged_delegates_count": 20,
+    "super_delegates_count": 4
+  },
+  {
+    "contest_id": 33,
+    "state_name": "New Hampshire",
+    "state_symbol": "NH",
+    "state_id": 33,
+    "candidate_id": 1,
+    "votes": 95324,
+    "pledged_delegates_count": 9,
+    "super_delegates_count": 6
+  },
+  {
+    "contest_id": 34,
+    "state_name": "New Jersey",
+    "state_symbol": "NJ",
+    "state_id": 34,
+    "candidate_id": 1,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 9
+  },
+  {
+    "contest_id": 35,
+    "state_name": "New Mexico",
+    "state_symbol": "NM",
+    "state_id": 35,
+    "candidate_id": 1,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 6
+  },
+  {
+    "contest_id": 36,
+    "state_name": "New York",
+    "state_symbol": "NY",
+    "state_id": 36,
+    "candidate_id": 1,
+    "votes": 1057347,
+    "pledged_delegates_count": 139,
+    "super_delegates_count": 40
+  },
+  {
+    "contest_id": 37,
+    "state_name": "North Carolina",
+    "state_symbol": "NC",
+    "state_id": 37,
+    "candidate_id": 1,
+    "votes": 622919,
+    "pledged_delegates_count": 60,
+    "super_delegates_count": 8
+  },
+  {
+    "contest_id": 38,
+    "state_name": "North Dakota",
+    "state_symbol": "ND",
+    "state_id": 38,
+    "candidate_id": 1,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 39,
+    "state_name": "Northern Marianas",
+    "state_symbol": "NA",
+    "state_id": 39,
+    "candidate_id": 1,
+    "votes": 102,
+    "pledged_delegates_count": 4,
+    "super_delegates_count": 5
+  },
+  {
+    "contest_id": 40,
+    "state_name": "Ohio",
+    "state_symbol": "OH",
+    "state_id": 40,
+    "candidate_id": 1,
+    "votes": 696681,
+    "pledged_delegates_count": 81,
+    "super_delegates_count": 14
+  },
+  {
+    "contest_id": 41,
+    "state_name": "Oklahoma",
+    "state_symbol": "OK",
+    "state_id": 41,
+    "candidate_id": 1,
+    "votes": 139338,
+    "pledged_delegates_count": 17,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 42,
+    "state_name": "Oregon",
+    "state_symbol": "OR",
+    "state_id": 42,
+    "candidate_id": 1,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 6
+  },
+  {
+    "contest_id": 43,
+    "state_name": "Pennsylvania",
+    "state_symbol": "PA",
+    "state_id": 43,
+    "candidate_id": 1,
+    "votes": 918694,
+    "pledged_delegates_count": 106,
+    "super_delegates_count": 21
+  },
+  {
+    "contest_id": 44,
+    "state_name": "Puerto Rico",
+    "state_symbol": "PR",
+    "state_id": 44,
+    "candidate_id": 1,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 3
+  },
+  {
+    "contest_id": 45,
+    "state_name": "Rhode Island",
+    "state_symbol": "RI",
+    "state_id": 45,
+    "candidate_id": 1,
+    "votes": 52749,
+    "pledged_delegates_count": 11,
+    "super_delegates_count": 9
+  },
+  {
+    "contest_id": 46,
+    "state_name": "South Carolina",
+    "state_symbol": "SC",
+    "state_id": 46,
+    "candidate_id": 1,
+    "votes": 272379,
+    "pledged_delegates_count": 39,
+    "super_delegates_count": 5
+  },
+  {
+    "contest_id": 47,
+    "state_name": "South Dakota",
+    "state_symbol": "SD",
+    "state_id": 47,
+    "candidate_id": 1,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 48,
+    "state_name": "Tennessee",
+    "state_symbol": "TN",
+    "state_id": 48,
+    "candidate_id": 1,
+    "votes": 245304,
+    "pledged_delegates_count": 44,
+    "super_delegates_count": 5
+  },
+  {
+    "contest_id": 49,
+    "state_name": "Texas",
+    "state_symbol": "TX",
+    "state_id": 49,
+    "candidate_id": 1,
+    "votes": 935080,
+    "pledged_delegates_count": 147,
+    "super_delegates_count": 20
+  },
+  {
+    "contest_id": 50,
+    "state_name": "Utah",
+    "state_symbol": "UT",
+    "state_id": 50,
+    "candidate_id": 1,
+    "votes": 15666,
+    "pledged_delegates_count": 6,
+    "super_delegates_count": 2
+  },
+  {
+    "contest_id": 51,
+    "state_name": "Vermont",
+    "state_symbol": "VT",
+    "state_id": 51,
+    "candidate_id": 1,
+    "votes": 18335,
+    "pledged_delegates_count": 0,
+    "super_delegates_count": 3
+  },
+  {
+    "contest_id": 52,
+    "state_name": "Virgin Islands",
+    "state_symbol": "VI",
+    "state_id": 52,
+    "candidate_id": 1,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 53,
+    "state_name": "Virginia",
+    "state_symbol": "VA",
+    "state_id": 53,
+    "candidate_id": 1,
+    "votes": 503358,
+    "pledged_delegates_count": 62,
+    "super_delegates_count": 13
+  },
+  {
+    "contest_id": 54,
+    "state_name": "Washington",
+    "state_symbol": "WA",
+    "state_id": 54,
+    "candidate_id": 1,
+    "votes": 7140,
+    "pledged_delegates_count": 27,
+    "super_delegates_count": 10
+  },
+  {
+    "contest_id": 55,
+    "state_name": "West Virginia",
+    "state_symbol": "WV",
+    "state_id": 55,
+    "candidate_id": 1,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 4
+  },
+  {
+    "contest_id": 56,
+    "state_name": "Wisconsin",
+    "state_symbol": "WI",
+    "state_id": 56,
+    "candidate_id": 1,
+    "votes": 432767,
+    "pledged_delegates_count": 38,
+    "super_delegates_count": 6
+  },
+  {
+    "contest_id": 57,
+    "state_name": "Wyoming",
+    "state_symbol": "WY",
+    "state_id": 57,
+    "candidate_id": 1,
+    "votes": 124,
+    "pledged_delegates_count": 7,
+    "super_delegates_count": 4
+  },
+  {
+    "contest_id": 1,
+    "state_name": "Alabama",
+    "state_symbol": "AL",
+    "state_id": 1,
+    "candidate_id": 2,
+    "votes": 76059,
+    "pledged_delegates_count": 9,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 2,
+    "state_name": "Alaska",
+    "state_symbol": "AK",
+    "state_id": 2,
+    "candidate_id": 2,
+    "votes": 8447,
+    "pledged_delegates_count": 13,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 3,
+    "state_name": "American Samoa",
+    "state_symbol": "AS",
+    "state_id": 3,
+    "candidate_id": 2,
+    "votes": 61,
+    "pledged_delegates_count": 2,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 4,
+    "state_name": "Arizona",
+    "state_symbol": "AZ",
+    "state_id": 4,
+    "candidate_id": 2,
+    "votes": 192962,
+    "pledged_delegates_count": 33,
+    "super_delegates_count": 2
+  },
+  {
+    "contest_id": 5,
+    "state_name": "Arkansas",
+    "state_symbol": "AR",
+    "state_id": 5,
+    "candidate_id": 2,
+    "votes": 66236,
+    "pledged_delegates_count": 10,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 6,
+    "state_name": "California",
+    "state_symbol": "CA",
+    "state_id": 6,
+    "candidate_id": 2,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 7,
+    "state_name": "Colorado",
+    "state_symbol": "CO",
+    "state_id": 7,
+    "candidate_id": 2,
+    "votes": 72846,
+    "pledged_delegates_count": 41,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 8,
+    "state_name": "Connecticut",
+    "state_symbol": "CT",
+    "state_id": 8,
+    "candidate_id": 2,
+    "votes": 152415,
+    "pledged_delegates_count": 27,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 9,
+    "state_name": "Delaware",
+    "state_symbol": "DE",
+    "state_id": 9,
+    "candidate_id": 2,
+    "votes": 36659,
+    "pledged_delegates_count": 9,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 10,
+    "state_name": "Democrats Abroad",
+    "state_symbol": "DA",
+    "state_id": 10,
+    "candidate_id": 2,
+    "votes": 23779,
+    "pledged_delegates_count": 9,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 11,
+    "state_name": "Washington DC",
+    "state_symbol": "DC",
+    "state_id": 11,
+    "candidate_id": 2,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 2
+  },
+  {
+    "contest_id": 12,
+    "state_name": "Florida",
+    "state_symbol": "FL",
+    "state_id": 12,
+    "candidate_id": 2,
+    "votes": 568839,
+    "pledged_delegates_count": 73,
+    "super_delegates_count": 2
+  },
+  {
+    "contest_id": 13,
+    "state_name": "Georgia",
+    "state_symbol": "GA",
+    "state_id": 13,
+    "candidate_id": 2,
+    "votes": 214332,
+    "pledged_delegates_count": 29,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 14,
+    "state_name": "Guam",
+    "state_symbol": "GU",
+    "state_id": 14,
+    "candidate_id": 2,
+    "votes": 528,
+    "pledged_delegates_count": 3,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 15,
+    "state_name": "Hawaii",
+    "state_symbol": "HI",
+    "state_id": 15,
+    "candidate_id": 2,
+    "votes": 23530,
+    "pledged_delegates_count": 17,
+    "super_delegates_count": 2
+  },
+  {
+    "contest_id": 16,
+    "state_name": "Idaho",
+    "state_symbol": "ID",
+    "state_id": 16,
+    "candidate_id": 2,
+    "votes": 18640,
+    "pledged_delegates_count": 18,
+    "super_delegates_count": 2
+  },
+  {
+    "contest_id": 17,
+    "state_name": "Illinois",
+    "state_symbol": "IL",
+    "state_id": 17,
+    "candidate_id": 2,
+    "votes": 999494,
+    "pledged_delegates_count": 77,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 18,
+    "state_name": "Indiana",
+    "state_symbol": "IN",
+    "state_id": 18,
+    "candidate_id": 2,
+    "votes": 335261,
+    "pledged_delegates_count": 44,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 19,
+    "state_name": "Iowa",
+    "state_symbol": "IA",
+    "state_id": 19,
+    "candidate_id": 2,
+    "votes": 697,
+    "pledged_delegates_count": 21,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 20,
+    "state_name": "Kansas",
+    "state_symbol": "KS",
+    "state_id": 20,
+    "candidate_id": 2,
+    "votes": 26450,
+    "pledged_delegates_count": 23,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 21,
+    "state_name": "Kentucky",
+    "state_symbol": "KY",
+    "state_id": 21,
+    "candidate_id": 2,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 22,
+    "state_name": "Louisiana",
+    "state_symbol": "LA",
+    "state_id": 22,
+    "candidate_id": 2,
+    "votes": 72240,
+    "pledged_delegates_count": 14,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 23,
+    "state_name": "Maine",
+    "state_symbol": "ME",
+    "state_id": 23,
+    "candidate_id": 2,
+    "votes": 2231,
+    "pledged_delegates_count": 16,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 24,
+    "state_name": "Maryland",
+    "state_symbol": "MD",
+    "state_id": 24,
+    "candidate_id": 2,
+    "votes": 281705,
+    "pledged_delegates_count": 34,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 25,
+    "state_name": "Massachusetts",
+    "state_symbol": "MA",
+    "state_id": 25,
+    "candidate_id": 2,
+    "votes": 586716,
+    "pledged_delegates_count": 45,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 26,
+    "state_name": "Michigan",
+    "state_symbol": "MI",
+    "state_id": 26,
+    "candidate_id": 2,
+    "votes": 598943,
+    "pledged_delegates_count": 67,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 27,
+    "state_name": "Minnesota",
+    "state_symbol": "MN",
+    "state_id": 27,
+    "candidate_id": 2,
+    "votes": 118135,
+    "pledged_delegates_count": 46,
+    "super_delegates_count": 3
+  },
+  {
+    "contest_id": 28,
+    "state_name": "Mississippi",
+    "state_symbol": "MS",
+    "state_id": 28,
+    "candidate_id": 2,
+    "votes": 36348,
+    "pledged_delegates_count": 4,
+    "super_delegates_count": 2
+  },
+  {
+    "contest_id": 29,
+    "state_name": "Missouri",
+    "state_symbol": "MO",
+    "state_id": 29,
+    "candidate_id": 2,
+    "votes": 310711,
+    "pledged_delegates_count": 35,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 30,
+    "state_name": "Montana",
+    "state_symbol": "MT",
+    "state_id": 30,
+    "candidate_id": 2,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 31,
+    "state_name": "Nebraska",
+    "state_symbol": "NE",
+    "state_id": 31,
+    "candidate_id": 2,
+    "votes": 19120,
+    "pledged_delegates_count": 15,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 32,
+    "state_name": "Nevada",
+    "state_symbol": "NV",
+    "state_id": 32,
+    "candidate_id": 2,
+    "votes": 5678,
+    "pledged_delegates_count": 15,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 33,
+    "state_name": "New Hampshire",
+    "state_symbol": "NH",
+    "state_id": 33,
+    "candidate_id": 2,
+    "votes": 152181,
+    "pledged_delegates_count": 15,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 34,
+    "state_name": "New Jersey",
+    "state_symbol": "NJ",
+    "state_id": 34,
+    "candidate_id": 2,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 2
+  },
+  {
+    "contest_id": 35,
+    "state_name": "New Mexico",
+    "state_symbol": "NM",
+    "state_id": 35,
+    "candidate_id": 2,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 36,
+    "state_name": "New York",
+    "state_symbol": "NY",
+    "state_id": 36,
+    "candidate_id": 2,
+    "votes": 766023,
+    "pledged_delegates_count": 108,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 37,
+    "state_name": "North Carolina",
+    "state_symbol": "NC",
+    "state_id": 37,
+    "candidate_id": 2,
+    "votes": 467143,
+    "pledged_delegates_count": 47,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 38,
+    "state_name": "North Dakota",
+    "state_symbol": "ND",
+    "state_id": 38,
+    "candidate_id": 2,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 39,
+    "state_name": "Northern Marianas",
+    "state_symbol": "NA",
+    "state_id": 39,
+    "candidate_id": 2,
+    "votes": 65,
+    "pledged_delegates_count": 2,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 40,
+    "state_name": "Ohio",
+    "state_symbol": "OH",
+    "state_id": 40,
+    "candidate_id": 2,
+    "votes": 535395,
+    "pledged_delegates_count": 62,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 41,
+    "state_name": "Oklahoma",
+    "state_symbol": "OK",
+    "state_id": 41,
+    "candidate_id": 2,
+    "votes": 174054,
+    "pledged_delegates_count": 21,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 42,
+    "state_name": "Oregon",
+    "state_symbol": "OR",
+    "state_id": 42,
+    "candidate_id": 2,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 43,
+    "state_name": "Pennsylvania",
+    "state_symbol": "PA",
+    "state_id": 43,
+    "candidate_id": 2,
+    "votes": 719960,
+    "pledged_delegates_count": 83,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 44,
+    "state_name": "Puerto Rico",
+    "state_symbol": "PR",
+    "state_id": 44,
+    "candidate_id": 2,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 45,
+    "state_name": "Rhode Island",
+    "state_symbol": "RI",
+    "state_id": 45,
+    "candidate_id": 2,
+    "votes": 66993,
+    "pledged_delegates_count": 13,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 46,
+    "state_name": "South Carolina",
+    "state_symbol": "SC",
+    "state_id": 46,
+    "candidate_id": 2,
+    "votes": 96498,
+    "pledged_delegates_count": 14,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 47,
+    "state_name": "South Dakota",
+    "state_symbol": "SD",
+    "state_id": 47,
+    "candidate_id": 2,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 48,
+    "state_name": "Tennessee",
+    "state_symbol": "TN",
+    "state_id": 48,
+    "candidate_id": 2,
+    "votes": 120333,
+    "pledged_delegates_count": 23,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 49,
+    "state_name": "Texas",
+    "state_symbol": "TX",
+    "state_id": 49,
+    "candidate_id": 2,
+    "votes": 475561,
+    "pledged_delegates_count": 75,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 50,
+    "state_name": "Utah",
+    "state_symbol": "UT",
+    "state_id": 50,
+    "candidate_id": 2,
+    "votes": 61333,
+    "pledged_delegates_count": 27,
+    "super_delegates_count": 2
+  },
+  {
+    "contest_id": 51,
+    "state_name": "Vermont",
+    "state_symbol": "VT",
+    "state_id": 51,
+    "candidate_id": 2,
+    "votes": 115863,
+    "pledged_delegates_count": 16,
+    "super_delegates_count": 6
+  },
+  {
+    "contest_id": 52,
+    "state_name": "Virgin Islands",
+    "state_symbol": "VI",
+    "state_id": 52,
+    "candidate_id": 2,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 53,
+    "state_name": "Virginia",
+    "state_symbol": "VA",
+    "state_id": 53,
+    "candidate_id": 2,
+    "votes": 275507,
+    "pledged_delegates_count": 33,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 54,
+    "state_name": "Washington",
+    "state_symbol": "WA",
+    "state_id": 54,
+    "candidate_id": 2,
+    "votes": 19159,
+    "pledged_delegates_count": 74,
+    "super_delegates_count": 0
+  },
+  {
+    "contest_id": 55,
+    "state_name": "West Virginia",
+    "state_symbol": "WV",
+    "state_id": 55,
+    "candidate_id": 2,
+    "votes": -1,
+    "pledged_delegates_count": -1,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 56,
+    "state_name": "Wisconsin",
+    "state_symbol": "WI",
+    "state_id": 56,
+    "candidate_id": 2,
+    "votes": 567936,
+    "pledged_delegates_count": 48,
+    "super_delegates_count": 1
+  },
+  {
+    "contest_id": 57,
+    "state_name": "Wyoming",
+    "state_symbol": "WY",
+    "state_id": 57,
+    "candidate_id": 2,
+    "votes": 156,
+    "pledged_delegates_count": 7,
+    "super_delegates_count": 0
+  }
+]

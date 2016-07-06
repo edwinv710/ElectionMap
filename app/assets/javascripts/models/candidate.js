@@ -1,17 +1,8 @@
 var Candidate = function(candidate, index){
 
-   var id = candidate.id;
-   var firstName = candidate.firstName;
-   var lastName = candidate.lastName;
-   var affiliation = candidate.affiliation;
-   var status = candidate.status;
-   var delegateCount = candidate.delegateCount;  
-   var imageUrl = candidate.imageUrl;
-   var bannerUrl = candidate.bannerUrl;
-   var websiteUrl = candidate.websiteUrl;
-   var description = candidate.description;
-   var fullName = firstName.concat(" ", lastName);
    var lastCompetitiveDate = candidate.lastCompetitiveDate ? new Date(candidate.lastCompetitiveDate) : null;
+   var color = CANDIDATECOLORS[index % CANDIDATECOLORS.length];
+
 
    function hexToRgba(hex, opacity) {
       opacity = opacity || 1;
@@ -27,33 +18,31 @@ var Candidate = function(candidate, index){
       } : null;
    }
 
-   var color = (function setColor(){
-      return CANDIDATECOLORS[index % CANDIDATECOLORS.length];
-   })();
-
-   var setCandidateSpecificStyles = (function(){
-      $('<style>.ui.toggle.checkbox input:checked ~ .box:before, .ui.toggle.checkbox input:checked ~ label.candidate'+id+':before{background-color:'+color+' !important;}</style>').appendTo('head');
-      $('<style>.slider.candidate'+id+' .ui-widget-header{background-color:'+color+' !important;}</style>').appendTo('head');
-   })();
-
    var rgba = function(opacity){
       return hexToRgba(color, opacity);
    }
 
+   var setCandidateSpecificStyles = function(){
+      $('<style>.ui.toggle.checkbox input:checked ~ .box:before, .ui.toggle.checkbox input:checked ~ label.candidate'+candidate.id+':before{background-color:'+color+' !important;}</style>').appendTo('head');
+      $('<style>.slider.candidate'+candidate.id+' .ui-widget-header{background-color:'+color+' !important;}</style>').appendTo('head');
+   }
+
+   setCandidateSpecificStyles();
+
    return {
-      id: id,
-      firstName: firstName,
-      lastName: lastName,
-      affiliation: affiliation,
-      status: status, 
-      delegateCount: delegateCount,
+      id: candidate.id,
+      firstName: candidate.firstName,
+      lastName: candidate.lastName,
+      affiliation: candidate.affiliation,
+      status: candidate.status, 
+      delegateCount: candidate.delegateCount,
       color: color,
-      imageUrl: imageUrl,
-      bannerUrl: bannerUrl,
+      imageUrl: candidate.imageUrl,
+      bannerUrl: candidate.bannerUrl,
       rgba: rgba,
-      websiteUrl: websiteUrl,
-      description: description,
-      fullName: fullName,
+      websiteUrl: candidate.websiteUrl,
+      description: candidate.description,
+      fullName: candidate.firstName.concat(" ", candidate.lastName),
       lastCompetitiveDate: lastCompetitiveDate,
       superDelegateCount: candidate.superDelegateCount,
       pledgedDelegateCount: candidate.pledgedDelegateCount

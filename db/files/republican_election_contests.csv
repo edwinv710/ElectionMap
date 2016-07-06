@@ -1,0 +1,57 @@
+id,state_name,state_symbol,state_id,date,contest_type,number_delegates,rule
+1,Alabama,AL,1,03/01/16,primary,50,winner
+2,Alaska,AK,2,03/01/16,caucus,28,proportional
+3,American Samoa,AS,3,03/22/16,caucus,9,
+4,Arizona,AZ,4,03/22/16,primary,58,winner
+5,Arkansas,AR,5,03/01/16,primary,40,winner
+6,California,CA,6,06/07/16,primary,172,winner
+7,Colorado,CO,7,03/01/16,caucus,37,
+8,Connecticut,CT,8,04/26/16,primary,28,winner
+9,Delaware,DE,9,04/26/16,primary,16,winner
+10,Washington DC, DC,11,03/12/16,convention,19,winner
+11,Florida,FL,12,03/15/16,primary,99,winner
+12,Georgia,GA,13,03/01/16,primary,76,winner
+13,Guam,GU,14,03/12/16,caucus,9,
+14,Hawaii,HI,15,03/08/16,caucus,19,proportional
+15,Idaho,ID,16,03/08/16,primary,32,winner
+16,Illinois,IL,17,03/15/16,primary,69,winner
+17,Indiana,IN,18,05/03/16,primary,57,winner
+18,Iowa,IA,19,02/01/16,caucus,30,proportional
+19,Kansas,KS,20,03/05/16,caucus,40,proportional
+20,Kentucky,KY,21,03/05/16,caucus,46,proportional
+21,Louisiana,LA,22,03/05/16,primary,46,proportional
+22,Maine,ME,23,03/05/16,caucus,23,winner
+23,Maryland,MD,24,04/26/16,primary,38,winner
+24,Massachusetts,MA,25,03/01/16,primary,42,proportional
+25,Michigan,MI,26,03/08/16,primary,59,winner
+26,Minnesota,MN,27,03/01/16,caucus,38,proportional
+27,Mississippi,MS,28,03/08/16,primary,40,proportional
+28,Missouri,MO,29,03/15/16,primary,52,winner
+29,Montana,MT,30,06/07/16,primary,27,winner
+30,Nebraska,NE,31,05/10/16,primary,36,winner
+31,Nevada,NV,32,02/23/16,caucus,30,proportional
+32,New Hampshire,NH,33,02/09/16,primary,23,proportional
+33,New Jersey,NJ,34,06/07/16,primary,51,winner
+34,New Mexico,NM,35,06/07/16,primary,24,proportional
+35,New York,NY,36,04/19/16,primary,95,winner
+36,North Carolina,NC,37,03/15/16,primary,72,proportional
+37,North Dakota,ND,38,04/13/16,caucus,28,
+38,Northern Marianas,NA,39,03/15/16,caucus,9,winner
+39,Ohio,OH,40,03/15/16,primary,66,winner
+40,Oklahoma,OK,41,03/01/16,primary,43,winner
+41,Oregon,OR,42,05/17/16,primary,28,proportional
+42,Pennsylvania,PA,43,04/26/16,primary,71,winner
+43,Puerto Rico,PR,44,03/06/16,primary,23,winner
+44,Rhode Island,RI,45,04/26/16,primary,19,proportional
+45,South Carolina,SC,46,02/20/16,primary,50,winner
+46,South Dakota,SD,47,06/07/16,primary,29,winner
+47,Tennessee,TN,48,03/01/16,primary,58,winner
+48,Texas,TX,49,03/01/16,primary,155,winner
+49,Virgin Islands,VI,52,03/10/16,caucus,9,
+50,Utah,UT,50,03/22/16,caucus,40,winner
+51,Vermont,VT,51,03/01/16,primary,16,winner
+52,Virginia,VA,53,03/01/16,primary,49,proportional
+53,Washington,WA,54,05/24/16,primary,44,proportional
+54,West Virginia,WV,55,05/10/16,primary,34,
+55,Wisconsin,WI,56,04/05/16,primary,42,winner
+56,Wyoming,WY,57,03/01/16,caucus,29,

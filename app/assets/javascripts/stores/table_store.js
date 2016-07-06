@@ -2,7 +2,6 @@ TableStore = function(election){
   
   var data = { contestHeaders: [], candidatesHeaders: [], results: [], styles: []};
   var resultMapping = {};
-  
   var candidateHeaderMapping = {};
   var colorMapping = {};
 
@@ -40,7 +39,6 @@ TableStore = function(election){
 
   var resetColumn = function(state){
     var results = data.results[resultMapping[state]].candidatesResults;
-    console.log(JSON.stringify(results))
     Object.keys(results).forEach(function(key){
       results[key].style = {};
       results[key].value = 0;
@@ -59,7 +57,6 @@ TableStore = function(election){
     var contest = e.contests[resultMapping[state]];
     resetColumn(state);
     contest.results.forEach(function(result){
-      console.log("Result "+JSON.stringify(result))
       var header = candidateHeaderMapping[result.candidateId.toString()];
       data.results[resultMapping[state]].candidatesResults[header].value = result.delegateCount
       if(result.candidateId === contest.winner){
@@ -84,7 +81,7 @@ TableStore = function(election){
       data.candidatesHeaders.forEach(function(header, index){
          var candidate = election.candidates[index];
          if(!candidate.lastCompetitiveDate || (candidate.lastCompetitiveDate > contest.date)){
-           var style = contest.winner === candidate.id ? {backgroundColor: candidate.color, color: "white", fontWeight: 900} : {};
+           var style = contest.winner === candidate.id && contest.userResults.length === 0 ? {backgroundColor: candidate.color, color: "white", fontWeight: 900} : {};
            row.candidatesResults[header] = {};
            var contestResult = contest.results.find(function(result){return result.candidateId === candidate.id})
 
@@ -98,7 +95,7 @@ TableStore = function(election){
       });
 
       resultMapping[contest.state.symbol] = index;
-      row.isComplete = (contest.winner > 0);
+      row.isComplete = contest.isComplete;
       row.symbol = contest.state.symbol;
       row.rule = contest.rule;
       return row;

@@ -1,0 +1,22 @@
+.ui.vertical.left.sidebar.menu{
+   z-index: 100;
+   width: 25rem;
+   text-align: left;
+}
+
+.ui.vertical.left.sidebar.menu .item{
+   text-align: left;
+}
+
+.sidebar.menu .item.header{
+   font-size: 1.5rem;
+   font-weight: 900;
+}
+
+.sidebar.menu .item.body{
+   font-size: 1.4rem;
+}
+
+.sidebar.menu .item.body .menu a.item{
+   font-size: 1.2rem;
+}

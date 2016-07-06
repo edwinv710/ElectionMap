@@ -1,16 +1,24 @@
 var Result = function(result){
-   var candidateId = result.candidateId;
-   var delegateCount = result.delegateCount;
-   var delegateType = result.delegateType;
 
    var updateDelegateCount = function(value){
       this.delegateCount = this.delegateCount + value;
    }
 
+   var setDelegateCount = function(value){
+      this.delegateCount = value;
+   }
+
+   var belongsTo = function(candidateId){
+      return this.candidateId === candidateId && this.delegateType === "user";
+   }
+
+
    return {
-      candidateId: candidateId,
-      delegateCount: delegateCount,
-      delegateType: delegateType,
-      updateDelegateCount: updateDelegateCount
+      candidateId: result.candidateId,
+      delegateCount: result.delegateCount,
+      delegateType: result.delegateType,
+      updateDelegateCount: updateDelegateCount,
+      belongsTo: belongsTo,
+      setDelegateCount: setDelegateCount
    }
 }

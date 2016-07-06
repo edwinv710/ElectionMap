@@ -23,12 +23,18 @@ class Candidate < ApplicationRecord
       results.contest_ids
    end
 
+# left join contests on contest.election_id = election.id, left join results on results.contest_id = contest.id and results.candidate_id = candidate.id
+
+
    def self.include_delegate_count
-      self.select("candidates.*, SUM(results.delegate_count) as delegate_count").joins(:results).group("1")
+      # self.select("candidates.*, COALESCE(SUM(results.delegate_count), 0) as delegate_count").joins("LEFT JOIN 'results' ON results.candidate_id = candidates.id").group("1")
    end
 
    def self.participating_in_election(election_id)
-      self.joins(:results).joins("INNER JOIN contests ON results.contest_id = contests.id").where("contests.election_id = ?", election_id)
+      #self.joins("LEFT JOIN 'results' ON results.candidate_id = candidates.id").joins("LEFT JOIN contests ON results.contest_id = contests.id").where("contests.election_id = ?", election_id)
+      # self.select("candidates.*, COALESCE(SUM(results.delegate_count), 0) as delegate_count").joins("LEFT JOIN elections ON elections.id = candidates_elections.election_id").joins("LEFT JOIN contests ON contests.election_id = elections.id").joins("LEFT JOIN results ON results.contest_id = contests.id").where("elections.id = ? AND is_shown = ?", election_id, true).group("1")
+      self.select("candidates.*, COALESCE(SUM(results.delegate_count), 0) as delegate_count").joins("LEFT JOIN contests ON contests.election_id = candidates_elections.election_id").joins("LEFT JOIN results ON results.contest_id = contests.id").group("1").where("candidates_elections.election_id = ?", election_id).where(is_shown: true)
+      # joins("LEFT JOIN 'results' ON results.candidate_id = candidates.id").joins("INNER JOIN contests ON results.contest_id = contests.id AND elections.contest_id = contest.id").group("1")
    end
 
    def is_active

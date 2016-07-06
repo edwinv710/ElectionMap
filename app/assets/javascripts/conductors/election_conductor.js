@@ -36,7 +36,8 @@ ElectionConductor = function(electionObject){
    }
 
    var updateStateResult = function(state, candidateId, value){
-      winners = election.update(state, candidateId.toString(), value);
+      
+      election.update(state, candidateId, value);
       candidateStore.update(election);
       tableStore.update(state, election);
       updateComponent({candidateStore: candidateStore.data, tableStore: tableStore.data});

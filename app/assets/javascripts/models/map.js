@@ -1,26 +1,23 @@
 Map = function(mapStore) {
 
-  var mapConfig = USMapConfig;
+   var config = USMapConfig.config;
+   var paths = USMapConfig.paths;
 
-   var config = mapConfig.config;
-   var paths = mapConfig.paths;
-   var pins = mapConfig.pins;
-
-   var r;
+   var vectorMap;
 
    var mouseX = 0;
    var mouseY = 0;
    var current = null;
    var isPin = false;
-   var mapWrapper = $('.lg-map-wrapper');
-   var textArea = $('.lg-map-wrapper .lg-map-text');
-   var map = $('.lg-map-wrapper #lg-map');
-   var containerWidth = mapWrapper.parent().width();
+   var $mapWrapper = $('.lg-map-wrapper');
+   var $map = $('.lg-map-wrapper #lg-map');
+   var containerWidth = $mapWrapper.parent().width();
    var useTextAtBottom;
    var win = $(window);
    var winWidth = win.width();
    var stateSelectAction = null;
    var tooltip = null;
+   var shapeAr = [];
 
 
    window.mobileAndTabletcheck = function() {
@@ -41,21 +38,12 @@ Map = function(mapStore) {
    var ratio = mapWidth / mapHeight;
    var oMapWidth = mapWidth;
 
-   (function setMousePosition() {
+   var setMousePosition = function() {
       if (config.displayMousePosition) {
-         $('<div class="mouse-position"><div class="xPos">X: 0</div><div class="yPos">Y: 0</div></div>').appendTo(mapWrapper);
+         $('<div class="mouse-position"><div class="xPos">X: 0</div><div class="yPos">Y: 0</div></div>').appendTo($mapWrapper);
          $('body').css('cursor', 'crosshair');
       }
-   })();
-
-   (function setDefaultText() {
-      if (config.useText) {
-         textArea.html(config.defaultText);
-      } else {
-         textArea.hide();
-      }
-   })();
-
+   }
 
    var getStateColor = function(stateSymbol){
       if(mapStore[stateSymbol]) return mapStore[stateSymbol];
@@ -66,10 +54,54 @@ Map = function(mapStore) {
       stateSelectAction = action;
    }
 
-   function createMap() {
-      var shapeAr = [];
+    var mouseHoverAction = function(isMouseOver, shape){
+      var shape = shape;
+      return function(e){
+         var id = $(this.node).attr('id');
+         if(isMouseOver) e.stopPropagation();
+         var opacity = isMouseOver ? "0.8" : "1";
+         if (paths[id].enable) {
+            if (shape != current) $(shape.node).css("opacity", opacity);
+            // if(isMouseOver) showTooltip(paths[id].text);
+            // if(!isMouseOver) removeTooltip();
+         }
+      }
+   }
 
-      r = new ScaleRaphael('lg-map', config.mapWidth, config.mapHeight),
+   var mouseUpAction = function(shape){
+      var shape = shape;
+      return function(e){
+         var id = $(this.node).attr('id');
+         var title = paths[parseInt(id)].name
+         var abbreviation = paths[parseInt(id)].abbreviation
+
+  
+
+         if (paths[id].enable) {
+            if (current) {
+               $(current.node).css("opacity", "1")
+            }
+            isPin = false;
+            $(shapeAr[id].node).css("opacity", "0.8");
+            current = shapeAr[id];
+            stateSelectAction(abbreviation);
+         }
+
+         $("table").find("tr").removeClass("active");
+         $("."+abbreviation+"-row").addClass("active");
+
+         $(window).scrollTo("."+abbreviation+"-row", {
+            duration: 800,
+            offset: {
+               top: -20
+            }
+         });
+      }
+   }
+
+   var createMap = function() {
+
+      vectorMap = new ScaleRaphael('lg-map', config.mapWidth, config.mapHeight),
          attributes = {
             fill: '#d9d9d9',
             cursor: 'crosshair',
@@ -92,30 +124,21 @@ Map = function(mapStore) {
          var symbol = paths[i].abbreviation;
 
          var shortName = paths[state].name.split('-').join('').toLowerCase();
-         regions[shortName] = r.set();
+         regions[shortName] = vectorMap.set();
 
-         //Create obj
          var obj = regions[shortName];
          obj.attr(attributes);
 
-         if (!paths[i].enable) {
-            boxattrs = {
-               'fill': config.offColor,
-               stroke: config.offStrokeColor
-            };
-         } else {
-            boxattrs = {
-               'fill': getStateColor(symbol),
-               stroke: config.strokeColor,
-               'id': i
-            };
-         }
+         boxattrs = {
+            'fill': getStateColor(symbol),
+            stroke: config.strokeColor,
+            'id': i
+         };
 
+         obj.push(vectorMap.path(paths[state].path).attr(boxattrs));
 
-         obj.push(r.path(paths[state].path).attr(boxattrs));
-         //Only display text on enabled states unless set in config 
          if (paths[i].enable && config.displayAbbreviations || !paths[i].enable && config.displayAbbreviationOnDisabledStates) {
-            obj.push(r.text(paths[state].textX, paths[state].textY, symbol).attr({
+            obj.push(vectorMap.text(paths[state].textX, paths[state].textY, symbol).attr({
                "font-family": "Arial, sans-serif",
                "font-weight": "bold",
                "font-size": config.abbreviationFontSize,
@@ -135,10 +158,11 @@ Map = function(mapStore) {
             obj[1].toFront();
          }
 
+         var currentShape = obj[0];
+         shapeAr.push(currentShape);
 
-         shapeAr.push(obj[0]);
 
-         var hitArea = r.path(paths[state].path).attr({
+         var hitArea = vectorMap.path(paths[state].path).attr({
             fill: "#f00",
             "stroke-width": 0,
             "opacity": 0,
@@ -149,51 +173,9 @@ Map = function(mapStore) {
 
          $(hitArea.node).addClass("hit-" + symbol)
 
-         hitArea.mouseover(function(e) {
-            e.stopPropagation();
-            var id = $(this.node).attr('id');
-            if (paths[id].enable) {
-               if (shapeAr[id] != current) $(shapeAr[id].node).css("opacity", "0.8");
-               showTooltip(paths[id].text);
-               //showTooltip(tooltip)
-            }
-         });
-
-
-         hitArea.mouseout(function(e) {
-            var id = $(this.node).attr('id');
-            if (paths[id].enable) {
-               if (shapeAr[id] != current) $(shapeAr[id].node).css("opacity", "1");
-               removeTooltip();
-            }
-         });
-
-         hitArea.mouseup(function(e) {
-
-            var id = $(this.node).attr('id');
-            var title = paths[parseInt(id)].name
-            var abbreviation = paths[parseInt(id)].abbreviation
-
-            if (paths[id].enable) {
-               if (current) {
-                  $(current.node).css("opacity", "1")
-               }
-               isPin = false;
-               $(shapeAr[id].node).css("opacity", "0.8");
-               current = shapeAr[id];
-               stateSelectAction(abbreviation);
-            }
-
-            $("table").find("tr").removeClass("active");
-            $("."+abbreviation+"-row").addClass("active");
-
-            $(window).scrollTo("."+abbreviation+"-row", {
-               duration: 800,
-               offset: {
-                  top: -20
-               }
-            });
-         });
+         hitArea.mouseover(mouseHoverAction(true, currentShape));
+         hitArea.mouseout(mouseHoverAction(false, currentShape));
+         hitArea.mouseup(mouseUpAction());
 
 
          i++;
@@ -210,151 +192,27 @@ Map = function(mapStore) {
 
    }
 
-   function createPins() {
-
-      for (var i = 0; i < pins.length; i++) {
-
-         var pinattrs = {
-            'cursor': 'pointer',
-            'fill': pins[i].color,
-            'stroke': config.strokeColor,
-            'id': i
-         };
-
-         var pin = r.circle(pins[i].xPos, pins[i].yPos, config.pinSize).attr(pinattrs);
-         pin.node.id = i;
-
-         pin.mouseover(function(e) {
-
-            e.stopPropagation();
-
-            var id = $(this.node).attr('id');
-
-            //Animate if not already the current state
-            if (this != current) {
-               this.animate({
-                  fill: pins[id].hoverColor
-               }, 500);
-            }
-
-            //tooltip
-            showTooltip(pins[id].name);
-
-         });
-
-         pin.mouseout(function(e) {
-
-            var id = $(this.node).attr('id');
-
-            //Animate if not already the current state
-            if (this != current) {
-               this.animate({
-                  fill: pins[id].color
-               }, 500);
-            }
-
-            removeTooltip();
-
-         });
-
-         pin.mouseup(function(e) {
-
-            var id = $(this.node).attr('id');
-
-            //Reset scrollbar
-            var t = textArea[0];
-            t.scrollLeft = 0;
-            t.scrollTop = 0;
-
-            //Animate previous state out
-            if (current) {
-               var curid = $(current.node).attr('id');
-               current.animate({
-                  fill: isPin ? pins[curid].color : getCandidateColor(paths[id].abbreviation)
-               }, 500);
-            }
-            isPin = true;
-
-            //Animate next
-            this.animate({
-               fill: pins[id].selectedColor
-            }, 500);
-
-            current = this;
-
-            if (config.useText == true) {
-               textArea.html(pins[id].text);
-            } else {
-               window.open(pins[id].url, config.hrefTarget);
-            }
-
-         });
-
-      }
-   }
-
-
-   /////////////////////////////
-   //Resize map functions
-   /////////////////////////////
    function resizeMap() {
-
-      containerWidth = mapWrapper.parent().width();
+      containerWidth = $mapWrapper.parent().width();
       winWidth = win.width();
 
-      if (config.useText) {
-
-         //Force text to bottom on mobile
-         useTextAtBottom = winWidth >= 767 ? config.useTextAtBottom : true;
-
-         if (useTextAtBottom) {
-            mapWidth = containerWidth;
-            mapHeight = mapWidth / ratio;
-            mapWrapper.css({
-               'width': mapWidth + 'px',
-               'height': mapHeight + 'px'
-            });
-            textArea.css({
-               'width': mapWidth + 'px',
-               'marginTop': mapHeight + 'px'
-            });
-         } else {
-            mapWidth = containerWidth - config.textAreaWidth;
-            mapHeight = mapWidth / ratio;
-            mapWrapper.css({
-               'width': winWidth >= 767 ? mapWidth + config.textAreaWidth + 'px' : mapWidth + 'px',
-               'height': mapHeight + 'px'
-            });
-            textArea.css({
-               'width': winWidth >= 767 ? config.textAreaWidth + 'px' : mapWidth + 'px',
-               'height': winWidth >= 767 ? mapHeight + 'px' : config.textAreaHeight,
-               'display': 'inline',
-               'float': winWidth >= 767 ? 'right' : 'none',
-               'marginTop': winWidth >= 767 ? 0 : mapHeight + 'px'
-            });
-         }
-      } else {
          mapWidth = containerWidth;
          mapHeight = mapWidth / ratio;
-         mapWrapper.css({
+         $mapWrapper.css({
             'width': mapWidth + 'px',
             'height': mapHeight + 'px'
          });
-      }
-
-      r.changeSize(mapWidth, mapHeight, true, false);
-
+      
+      vectorMap.changeSize(mapWidth, mapHeight, true, false);
    }
 
-   /////////////////////////////
-   //Tooltip
-   /////////////////////////////
+
    function showTooltip(state, text) {
       if (isTouchDevice && isMobile) {
          return;
       }
-      //removeTooltip();
-      map.after($('<div />').addClass('tooltip'));
+
+      $map.after($('<div />').addClass('tooltip'));
       $('.tooltip').html(state).css({
          left: mouseX ,
          top: mouseY
@@ -362,7 +220,7 @@ Map = function(mapStore) {
    }
 
    function removeTooltip() {
-      map.next('.tooltip').remove();
+      $map.next('.tooltip').remove();
    }
 
 
@@ -390,14 +248,9 @@ Map = function(mapStore) {
          mouseY = 0;
       }
 
-      // map.next('.tooltip').css({
-      //    left: mouseX - 50,
-      //    top: mouseY - 70
-      // });
-
       if (config.displayMousePosition) {
          var scrollTop = win.scrollTop();
-         var offset = mapWrapper.offset();
+         var offset = $mapWrapper.offset();
          var relX = Math.round(mouseX - offset.left);
          var relY = Math.round(mouseY - offset.top + scrollTop);
          $('.mouse-position .xPos').text('X: ' + relX);
@@ -415,13 +268,12 @@ Map = function(mapStore) {
       $(".box-"+state).attr("fill", color);
    }
 
-   // Set-up to use getMouseXY function onMouseMove
    document.body.onmousemove = getMouseXY;
 
+   setMousePosition();
 
    return {
       createMap: createMap,
-      createPins: createPins,
       updateContest: updateContest,
       onStateSelect: onStateSelect
    }

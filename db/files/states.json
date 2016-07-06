@@ -1,0 +1,287 @@
+[
+  {
+    "name": "Alabama",
+    "symbol": "AL",
+    "id": 1
+  },
+  {
+    "name": "Alaska",
+    "symbol": "AK",
+    "id": 2
+  },
+  {
+    "name": "American Samoa",
+    "symbol": "AS",
+    "id": 3
+  },
+  {
+    "name": "Arizona",
+    "symbol": "AZ",
+    "id": 4
+  },
+  {
+    "name": "Arkansas",
+    "symbol": "AR",
+    "id": 5
+  },
+  {
+    "name": "California",
+    "symbol": "CA",
+    "id": 6
+  },
+  {
+    "name": "Colorado",
+    "symbol": "CO",
+    "id": 7
+  },
+  {
+    "name": "Connecticut",
+    "symbol": "CT",
+    "id": 8
+  },
+  {
+    "name": "Delaware",
+    "symbol": "DE",
+    "id": 9
+  },
+  {
+    "name": "Democrats Abroad",
+    "symbol": "DA",
+    "id": 10
+  },
+  {
+    "name": "Washington DC",
+    "symbol": "DC",
+    "id": 11
+  },
+  {
+    "name": "Florida",
+    "symbol": "FL",
+    "id": 12
+  },
+  {
+    "name": "Georgia",
+    "symbol": "GA",
+    "id": 13
+  },
+  {
+    "name": "Guam",
+    "symbol": "GU",
+    "id": 14
+  },
+  {
+    "name": "Hawaii",
+    "symbol": "HI",
+    "id": 15
+  },
+  {
+    "name": "Idaho",
+    "symbol": "ID",
+    "id": 16
+  },
+  {
+    "name": "Illinois",
+    "symbol": "IL",
+    "id": 17
+  },
+  {
+    "name": "Indiana",
+    "symbol": "IN",
+    "id": 18
+  },
+  {
+    "name": "Iowa",
+    "symbol": "IA",
+    "id": 19
+  },
+  {
+    "name": "Kansas",
+    "symbol": "KS",
+    "id": 20
+  },
+  {
+    "name": "Kentucky",
+    "symbol": "KY",
+    "id": 21
+  },
+  {
+    "name": "Louisiana",
+    "symbol": "LA",
+    "id": 22
+  },
+  {
+    "name": "Maine",
+    "symbol": "ME",
+    "id": 23
+  },
+  {
+    "name": "Maryland",
+    "symbol": "MD",
+    "id": 24
+  },
+  {
+    "name": "Massachusetts",
+    "symbol": "MA",
+    "id": 25
+  },
+  {
+    "name": "Michigan",
+    "symbol": "MI",
+    "id": 26
+  },
+  {
+    "name": "Minnesota",
+    "symbol": "MN",
+    "id": 27
+  },
+  {
+    "name": "Mississippi",
+    "symbol": "MS",
+    "id": 28
+  },
+  {
+    "name": "Missouri",
+    "symbol": "MO",
+    "id": 29
+  },
+  {
+    "name": "Montana",
+    "symbol": "MT",
+    "id": 30
+  },
+  {
+    "name": "Nebraska",
+    "symbol": "NE",
+    "id": 31
+  },
+  {
+    "name": "Nevada",
+    "symbol": "NV",
+    "id": 32
+  },
+  {
+    "name": "New Hampshire",
+    "symbol": "NH",
+    "id": 33
+  },
+  {
+    "name": "New Jersey",
+    "symbol": "NJ",
+    "id": 34
+  },
+  {
+    "name": "New Mexico",
+    "symbol": "NM",
+    "id": 35
+  },
+  {
+    "name": "New York",
+    "symbol": "NY",
+    "id": 36
+  },
+  {
+    "name": "North Carolina",
+    "symbol": "NC",
+    "id": 37
+  },
+  {
+    "name": "North Dakota",
+    "symbol": "ND",
+    "id": 38
+  },
+  {
+    "name": "Northern Marianas",
+    "symbol": "NA",
+    "id": 39
+  },
+  {
+    "name": "Ohio",
+    "symbol": "OH",
+    "id": 40
+  },
+  {
+    "name": "Oklahoma",
+    "symbol": "OK",
+    "id": 41
+  },
+  {
+    "name": "Oregon",
+    "symbol": "OR",
+    "id": 42
+  },
+  {
+    "name": "Pennsylvania",
+    "symbol": "PA",
+    "id": 43
+  },
+  {
+    "name": "Puerto Rico",
+    "symbol": "PR",
+    "id": 44
+  },
+  {
+    "name": "Rhode Island",
+    "symbol": "RI",
+    "id": 45
+  },
+  {
+    "name": "South Carolina",
+    "symbol": "SC",
+    "id": 46
+  },
+  {
+    "name": "South Dakota",
+    "symbol": "SD",
+    "id": 47
+  },
+  {
+    "name": "Tennessee",
+    "symbol": "TN",
+    "id": 48
+  },
+  {
+    "name": "Texas",
+    "symbol": "TX",
+    "id": 49
+  },
+  {
+    "name": "Utah",
+    "symbol": "UT",
+    "id": 50
+  },
+  {
+    "name": "Vermont",
+    "symbol": "VT",
+    "id": 51
+  },
+  {
+    "name": "Virgin Islands",
+    "symbol": "VI",
+    "id": 52
+  },
+  {
+    "name": "Virginia",
+    "symbol": "VA",
+    "id": 53
+  },
+  {
+    "name": "Washington",
+    "symbol": "WA",
+    "id": 54
+  },
+  {
+    "name": "West Virginia",
+    "symbol": "WV",
+    "id": 55
+  },
+  {
+    "name": "Wisconsin",
+    "symbol": "WI",
+    "id": 56
+  },
+  {
+    "name": "Wyoming",
+    "symbol": "WY",
+    "id": 57
+  }
+]

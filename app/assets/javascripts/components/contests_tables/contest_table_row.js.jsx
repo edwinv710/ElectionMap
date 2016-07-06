@@ -68,8 +68,8 @@ var ContestTableRow = React.createClass({
    
    blankColumn: function(header){
     return (
-      <td className="center aligned" style={{opacity: 0.3}}>
-        -
+      <td className="center aligned" style={{opacity: 0.3, color: "red"}}>
+        <i className="fa fa-times" aria-hidden="true"></i>
       </td>
     );
    },

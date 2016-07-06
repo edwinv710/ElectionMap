@@ -8,85 +8,74 @@ var Contest = function(contest){
    var stateLabel = state.symbol;
    var totalsByCandidates = {};
    var userIndex = null;
+   var isComplete = false;
 
    var userResults = [];
    
 
-
-   (function createResults(){
+   var createResults = function(){
       results = contest.results.map(function(result){
          return Result(result);
       });
-   })();
-
-   (function setWinner(){
-      if (results.length == 0) return (winner = -1);
-      if (results.length == 1) return (winner = results[0].candidateId);
-      var valueHash = {};
-
-      var keysSorted = []
       results.forEach(function(result){
-         valueHash[result.candidateId] = ((valueHash[result.candidateId] || 0) + result.delegateCount);
+         totalsByCandidates[result.candidateId] = ((totalsByCandidates[result.candidateId] || 0) + result.delegateCount);
       });
-      keysSorted = Object.keys(valueHash);
-      keysSorted.sort(function(a,b){
-         return valueHash[b] - valueHash[a];
-      });
-      if(valueHash[keysSorted[0]] === valueHash[keysSorted[1]]) winner = 0;
-      if(stateLabel == "NY"){
-      }
-      
-      totalsByCandidates =  valueHash;
-      if(stateLabel == "NY"){
-      }
-      winner = parseInt(keysSorted[0], 10)
-      
-   })();
+   }
 
-   var resetValuesExcept = function(candidateId){
+   var setWinner = function(){
+      winner = getWinner();   
+      // console.log("Winner for "+stateLabel+" is "+winner)
+   }
+
+   var setCompletion = function(){
+      isComplete = (Object.keys(totalsByCandidates).length > 0);
+
+
+   }
+
+   var resetValues = function(){
       Object.keys(totalsByCandidates).forEach(function(key){
-         if(key != candidateId) totalsByCandidates[key] = 0;
+         totalsByCandidates[key] = 0;
       });
 
       results.forEach(function(result){
-         if(result.candidateId != candidateId && result.delegateType === "user")  result.delegateCount = 0;
+         result.setDelegateCount(0);
       });
-
    };
 
-   var update = function(candidate, value){
-      if(this.rule != "proportional") resetValuesExcept(candidate);
-      
-      var result = results.find(function(r){
-         return (r.candidateId === candidate && r.delegateType === "user")
-      });
+   var update = function(candidateId, value){
+      if(this.rule != "proportional" && value > 0) resetValues();
+      var result = results.find(function(r){ return r.belongsTo(candidateId)});
       if(result){
-         difference = value - totalsByCandidates[candidate.toString()];
+         var difference = value - totalsByCandidates[candidateId];
          result.updateDelegateCount(difference);
       }else{
-         var newResult = Result({candidateId: candidate, delegateCount: value, delegateType: "user"});
+         var newResult = Result({candidateId: candidateId, delegateCount: value, delegateType: "user"});
          userResults.push(newResult);
          results.push(newResult);
       }
-      totalsByCandidates[candidate.toString()] = value;
-      return updateWinner();
+      totalsByCandidates[candidateId] = value;
+      
+      this.winner = getWinner();
    }
-// refactor
-   var updateWinner = function(){
-      var oldWinner = winner;
 
-      keys = Object.keys(totalsByCandidates);
-      keys.sort(function(a, b){
+
+   var getWinner = function(){
+      if (results.length == 0) return  -1;
+      if (results.length == 1) return results[0].candidateId;
+      
+
+      var keysSorted = Object.keys(totalsByCandidates).sort(function(a, b){
          return totalsByCandidates[b] - totalsByCandidates[a];
       });
 
-      if((keys.length > 1 && totalsByCandidates[keys[0]] > totalsByCandidates[keys[1]]) || (keys.length === 1 && totalsByCandidates[keys[0]] > 0)){
-         winner = parseInt(keys[0], 10);
-      }else{ 
-         winner = 0;
-      } 
-      return [oldWinner, winner];
+      var isTied = (totalsByCandidates[keysSorted[0]] === totalsByCandidates[keysSorted[1]]);
+      return (isTied ? 0 : parseInt(keysSorted[0], 10));
    }
+
+   createResults();
+   setWinner();
+   setCompletion();
 
    return {
       state: state,
@@ -100,6 +89,7 @@ var Contest = function(contest){
       update: update,
       name: contest.state.name,
       rule: contest.rule,
-      userResults: userResults
+      userResults: userResults,
+      isComplete: isComplete
    }
 }

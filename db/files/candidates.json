@@ -1,0 +1,198 @@
+[
+  {
+    "id": 1,
+    "first_name": "Hillary",
+    "last_name": "Clinton",
+    "affiliation": "Democrat",
+    "status": "active",
+    "description": "Fmr. Secretary of States",
+    "website_url": "www.hillaryclinton.com",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,r_0,w_400,y_10/electionmap/img/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png"
+  },
+  {
+    "id": 2,
+    "first_name": "Bernie",
+    "last_name": "Sanders",
+    "affiliation": "Democrat",
+    "status": "active",
+    "description": "Senator from Vermont",
+    "website_url": "berniesanders.com",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,w_400,x_0,y_5/electionmap/img/Bernie_Sanders.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png"
+    
+  },
+  {
+    "id": 3,
+    "first_name": "Martin",
+    "last_name": "O'Malley",
+    "affiliation": "Democrat",
+    "status": "inactive",
+    "description": "61st Governor of Maryland",
+    "website_url": "www.martinomalley.com",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,w_400,y_0/electionmap/img/Martin-OMalley.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_pad,h_369,w_600/electionmap/img/o-malley-for-president-2016-_6922.jpg"
+  },
+  {
+    "id": 4,
+    "first_name": "Ted",
+    "last_name": "Cruz",
+    "affiliation": "Republican",
+    "status": "active",
+    "description": "Senator from Texas",
+    "website_url": "www.tedcruz.org",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,r_0,w_400,y_10/electionmap/img/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png"
+  },
+  {
+    "id": 5,
+    "first_name": "John",
+    "last_name": "Kasich",
+    "affiliation": "Republican",
+    "status": "active",
+    "description": "69th Governor of Ohio",
+    "website_url": "www.johnkasich.com",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,r_0,w_400,y_10/electionmap/img/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png"
+  },
+  {
+    "id": 6,
+    "first_name": "Donald",
+    "last_name": "Trump",
+    "affiliation": "Republican",
+    "status": "active",
+    "description": "Businessperson",
+    "website_url": "www.trump.com",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,r_0,w_400,y_10/electionmap/img/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png"
+  },
+  {
+    "id": 7,
+    "first_name": "Marco",
+    "last_name": "Rubio",
+    "affiliation": "Republican",
+    "status": "inactive",
+    "description": "Senator from Florida",
+    "website_url": "marcorubio.com",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,r_0,w_400,y_10/electionmap/img/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png"
+  },
+  {
+    "id": 8,
+    "first_name": "Ben",
+    "last_name": "Carson",
+    "affiliation": "Republican",
+    "status": "inactive",
+    "description": "Retired Neurosurgeon",
+    "website_url": "www.bencarson.com",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,r_0,w_400,y_10/electionmap/img/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png",
+    "is_shown": 0
+  },
+  {
+    "id": 9,
+    "first_name": "Jeb",
+    "last_name": "Bush",
+    "affiliation": "Republican",
+    "status": "inactive",
+    "description": "43rd Governor of Florida",
+    "website_url": "jeb2016.com",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,r_0,w_400,y_10/electionmap/img/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png",
+    "is_shown": 0
+  },
+  {
+    "id": 10,
+    "first_name": "Jim",
+    "last_name": "Gilmore",
+    "affiliation": "Republican",
+    "status": "inactive",
+    "description": "68th Governor of Virginia",
+    "website_url": "www.gilmoreforamerica.com",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,r_0,w_400,y_10/electionmap/img/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png",
+    "is_shown": 0
+  },
+  {
+    "id": 11,
+    "first_name": "Chris",
+    "last_name": "Christie",
+    "affiliation": "Republican",
+    "status": "inactive",
+    "description": "55th Governor of New Jersey",
+    "website_url": "nj.gov/governor",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,r_0,w_400,y_10/electionmap/img/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png",
+    "is_shown": 0
+  },
+  {
+    "id": 12,
+    "first_name": "Carly",
+    "last_name": "Fiorina",
+    "affiliation": "Republican",
+    "status": "inactive",
+    "description": "Businessperson",
+    "website_url": "carlyforamerica.com",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,r_0,w_400,y_10/electionmap/img/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png",
+    "is_shown": 0
+  },
+  {
+    "id": 13,
+    "first_name": "Rick",
+    "last_name": "Santorum",
+    "affiliation": "Republican",
+    "status": "inactive",
+    "description": "Senator from Pennsylvania",
+    "website_url": "www.facebook.com/RickSantorum",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,r_0,w_400,y_10/electionmap/img/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png",
+    "is_shown": 0
+  },
+  {
+    "id": 14,
+    "first_name": "Rand",
+    "last_name": "Paul",
+    "affiliation": "Republican",
+    "status": "inactive",
+    "description": "Senator from Kentucky",
+    "website_url": "www.randpaul.com",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,r_0,w_400,y_10/electionmap/img/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png",
+    "is_shown": 0
+  },
+  {
+    "id": 15,
+    "first_name": "Mike",
+    "last_name": "Huckabee",
+    "affiliation": "Republican",
+    "status": "inactive",
+    "description": "44th Governor of Arkansas",
+    "website_url": "www.mikehuckabee.com",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,r_0,w_400,y_10/electionmap/img/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png",
+    "is_shown": 0
+  },
+  {
+    "id": 16,
+    "first_name": "Gary",
+    "last_name": "Johnson",
+    "affiliation": "Libertarian",
+    "status": "active",
+    "description": "29th Governor of New Mexico",
+    "website_url": "www.jill2016.com",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,r_0,w_400,y_10/electionmap/img/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png"
+  },
+  {
+    "id": 17,
+    "first_name": "Jill",
+    "last_name": "Stein",
+    "affiliation": "Green",
+    "status": "active",
+    "description": "Physician",
+    "website_url": "www.johnsonweld.com",
+    "image_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_400/c_crop,h_400,r_0,w_400,y_10/electionmap/img/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
+    "banner_url": "http://res.cloudinary.com/dqacnk0ea/image/upload/c_scale,w_600/electionmap/img/1200px-H4A.png"
+  }
+]
