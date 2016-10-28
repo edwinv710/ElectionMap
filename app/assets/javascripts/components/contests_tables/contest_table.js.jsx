@@ -5,9 +5,9 @@ var ContestTable = React.createClass({
   
   tableHeaders: function(){
     var tableHeaders = this.props.tableStore.contestHeaders.concat(this.props.tableStore.candidatesHeaders);
-    return tableHeaders.map(function(header){
+    return tableHeaders.map(function(header, i){
       return (
-          <th rowspan="2"> {header} </th>
+          <th rowspan="2" key={i}> {header} </th>
       );
     });
   },
@@ -16,10 +16,10 @@ var ContestTable = React.createClass({
     var contestHeaders = this.props.tableStore.contestHeaders;
     var candidatesHeaders = this.props.tableStore.candidatesHeaders;
     var updateResults = this.props.updateResults
-
-    return this.props.tableStore.results.map(function(result){
+    console.log(this.props.tableStore.results);
+    return this.props.tableStore.results.map(function(result, i){
       return (
-          <ContestTableRow contestHeaders={contestHeaders} candidatesHeaders={candidatesHeaders} result={result} updateResults={updateResults} rule={result.rule} />
+          <ContestTableRow key={i} contestHeaders={contestHeaders} candidatesHeaders={candidatesHeaders} result={result} updateResults={updateResults} rule={result.rule} />
 
       );
     });

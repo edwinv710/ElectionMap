@@ -6,8 +6,24 @@ var Election = function(election){
    var candidates = [];
    var contests = [];
    var userContestCode;
+
+   var contestResults = {};
+   var candidateTotals = {};
    
    var candidateIdToIndex = {};
+
+   function setCandidateResults() {
+     contests.forEach(function(contest){
+      Object.keys( contest.totalsByCandidates ).forEach( function(key){
+        candidateTotals[key] = ( candidateTotals[key] || 0 ) + contest.totalsByCandidates[key];
+      }); 
+    });
+     candidates.forEach(function(candidate){
+      candidate.pledgedDelegateCount = candidateTotals[candidate.id];
+     });
+     console.log(candidateTotals);
+     console.log(candidates);
+   }
 
    function getParameterByName(name, url) {
        if (!url) url = window.location.href;
@@ -20,6 +36,7 @@ var Election = function(election){
    }
 
    function setCandidates(){
+      console.log(election.candidates);
       candidates = election.candidates.map(function(candidate, index){
          candidateIdToIndex[candidate.id.toString()] = index;
          return Candidate(candidate, index);
@@ -77,6 +94,7 @@ var Election = function(election){
       var contest = contests.find(function(c){
          return (c.state.symbol === state);
       });
+
       if(contest){
          var rule = contest.rule;
          var previousValues = getDelegateCountMap(contest);
@@ -87,12 +105,12 @@ var Election = function(election){
       }
    }
 
+   
+   setContests();
 
    setCandidates();
-   setContests();
    createUserContests();
-
-   
+   setCandidateResults();
 
    return {
       name: election.name,

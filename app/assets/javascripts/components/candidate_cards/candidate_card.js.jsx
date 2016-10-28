@@ -13,6 +13,15 @@ var CandidateCard = React.createClass({
 
   },
 
+  superDelegatesSection: function(){
+    return (
+      <div className="group">
+        <header>Super Delegates</header>
+        <ProgressBar value={this.props.candidate.superDelegateCount} max={this.props.totalSuperDelegates} color={this.props.candidate.rgba(1).toString()} />
+      </div>
+    );
+  },
+
   render: function() {
    var displayCornerRibbons = displayCornerRibbons;
    return (

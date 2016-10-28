@@ -1,225 +1,225 @@
 contest_id,state_name,state_symbol,state_id,candidate_id,votes,pledged_delegates_count
-1,Alabama,AL,1,6,0,36
-2,Alaska,AK,2,6,0,11
-3,American Samoa,AS,3,6,0,1
-4,Arizona,AZ,4,6,0,58
-5,Arkansas,AR,5,6,0,16
-6,California,CA,6,6,0,127
-7,Colorado,CO,7,6,0,0
-8,Connecticut,CT,8,6,0,28
-9,Delaware,DE,9,6,0,16
-10,Washington DC, DC,11,6,0,0
-11,Florida,FL,12,6,0,99
-12,Georgia,GA,13,6,0,40
-13,Guam,GU,14,6,0,0
-14,Hawaii,HI,15,6,0,11
-15,Idaho,ID,16,6,0,12
-16,Illinois,IL,17,6,0,54
-17,Indiana,IN,18,6,0,57
-18,Iowa,IA,19,6,0,7
-19,Kansas,KS,20,6,0,9
-20,Kentucky,KY,21,6,0,17
-21,Louisiana,LA,22,6,0,25
-22,Maine,ME,23,6,0,9
-23,Maryland,MD,24,6,0,38
-24,Massachusetts,MA,25,6,0,22
-25,Michigan,MI,26,6,0,25
-26,Minnesota,MN,27,6,0,8
-27,Mississippi,MS,28,6,0,25
-28,Missouri,MO,29,6,0,37
-29,Montana,MT,30,6,0,27
-30,Nebraska,NE,31,6,0,36
-31,Nevada,NV,32,6,0,16
-32,New Hampshire,NH,33,6,0,12
-33,New Jersey,NJ,34,6,0,51
-34,New Mexico,NM,35,6,0,24
-35,New York,NY,36,6,0,89
-36,North Carolina,NC,37,6,0,29
-37,North Dakota,ND,38,6,0,0
-38,Northern Marianas,NA,39,6,0,0
-39,Ohio,OH,40,6,0,0
-40,Oklahoma,OK,41,6,0,13
-41,Oregon,OR,42,6,0,18
-42,Pennsylvania,PA,43,6,0,64
-43,Puerto Rico,PR,44,6,0,0
-44,Rhode Island,RI,45,6,0,10
-45,South Carolina,SC,46,6,0,50
-46,South Dakota,SD,47,6,0,29
-47,Tennessee,TN,48,6,0,33
-48,Texas,TX,49,6,0,48
-49,Virgin Islands,VI,52,6,0,0
-50,Utah,UT,50,6,0,40
-51,Vermont,VT,51,6,0,8
-52,Virginia,VA,53,6,0,17
-53,Washington,WA,54,6,0,40
-54,West Virginia,WV,55,6,0,32
-55,Wisconsin,WI,56,6,0,6
-56,Wyoming,WY,57,6,0,1
-1,Alabama,AL,1,4,0,12
-2,Alaska,AK,2,4,0,12
-3,American Samoa,AS,3,4,0,0
-4,Arizona,AZ,4,4,0,0
-5,Arkansas,AR,5,4,0,15
-6,California,CA,6,4,0,0
-7,Colorado,CO,7,4,0,0
-8,Connecticut,CT,8,4,0,0
-9,Delaware,DE,9,4,0,0
-10,Washington DC, DC,11,4,0,0
-11,Florida,FL,12,4,0,0
-12,Georgia,GA,13,4,0,18
-13,Guam,GU,14,4,0,0
-14,Hawaii,HI,15,4,0,7
-15,Idaho,ID,16,4,0,20
-16,Illinois,IL,17,4,0,9
-17,Indiana,IN,18,4,0,0
-18,Iowa,IA,19,4,0,8
-19,Kansas,KS,20,4,0,24
-20,Kentucky,KY,21,4,0,15
-21,Louisiana,LA,22,4,0,18
-22,Maine,ME,23,4,0,12
-23,Maryland,MD,24,4,0,0
-24,Massachusetts,MA,25,4,0,4
-25,Michigan,MI,26,4,0,17
-26,Minnesota,MN,27,4,0,13
-27,Mississippi,MS,28,4,0,15
-28,Missouri,MO,29,4,0,15
-29,Montana,MT,30,4,0,0
-30,Nebraska,NE,31,4,0,0
-31,Nevada,NV,32,4,0,6
-32,New Hampshire,NH,33,4,0,3
-33,New Jersey,NJ,34,4,0,0
-34,New Mexico,NM,35,4,0,0
-35,New York,NY,36,4,0,0
-36,North Carolina,NC,37,4,0,27
-37,North Dakota,ND,38,4,0,0
-38,Northern Marianas,NA,39,4,0,0
-39,Ohio,OH,40,4,0,0
-40,Oklahoma,OK,41,4,0,0
-41,Oregon,OR,42,4,0,5
-42,Pennsylvania,PA,43,4,0,4
-43,Puerto Rico,PR,44,4,0,0
-44,Rhode Island,RI,45,4,0,3
-45,South Carolina,SC,46,4,0,0
-46,South Dakota,SD,47,4,0,0
-47,Tennessee,TN,48,4,0,16
-48,Texas,TX,49,4,0,104
-49,Virgin Islands,VI,52,4,0,0
-50,Utah,UT,50,4,0,0
-51,Vermont,VT,51,4,0,0
-52,Virginia,VA,53,4,0,8
-53,Washington,WA,54,4,0,0
-54,West Virginia,WV,55,4,0,0
-55,Wisconsin,WI,56,4,0,36
-56,Wyoming,WY,57,4,0,23
-1,Alabama,AL,1,5,0,0
-2,Alaska,AK,2,5,0,0
-3,American Samoa,AS,3,5,0,0
-4,Arizona,AZ,4,5,0,0
-5,Arkansas,AR,5,5,0,0
-6,California,CA,6,5,0,0
-7,Colorado,CO,7,5,0,0
-8,Connecticut,CT,8,5,0,0
-9,Delaware,DE,9,5,0,0
-10,Washington DC, DC,11,5,0,9
-11,Florida,FL,12,5,0,0
-12,Georgia,GA,13,5,0,0
-13,Guam,GU,14,5,0,0
-14,Hawaii,HI,15,5,0,0
-15,Idaho,ID,16,5,0,0
-16,Illinois,IL,17,5,0,6
-17,Indiana,IN,18,5,0,0
-18,Iowa,IA,19,5,0,1
-19,Kansas,KS,20,5,0,1
-20,Kentucky,KY,21,5,0,7
-21,Louisiana,LA,22,5,0,0
-22,Maine,ME,23,5,0,2
-23,Maryland,MD,24,5,0,0
-24,Massachusetts,MA,25,5,0,8
-25,Michigan,MI,26,5,0,17
-26,Minnesota,MN,27,5,0,0
-27,Mississippi,MS,28,5,0,0
-28,Missouri,MO,29,5,0,0
-29,Montana,MT,30,5,0,0
-30,Nebraska,NE,31,5,0,0
-31,Nevada,NV,32,5,0,1
-32,New Hampshire,NH,33,5,0,4
-33,New Jersey,NJ,34,5,0,0
-34,New Mexico,NM,35,5,0,0
-35,New York,NY,36,5,0,4
-36,North Carolina,NC,37,5,0,9
-37,North Dakota,ND,38,5,0,0
-38,Northern Marianas,NA,39,5,0,0
-39,Ohio,OH,40,5,0,66
-40,Oklahoma,OK,41,5,0,14
-41,Oregon,OR,42,5,0,5
-42,Pennsylvania,PA,43,5,0,0
-43,Puerto Rico,PR,44,5,0,0
-44,Rhode Island,RI,45,5,0,5
-45,South Carolina,SC,46,5,0,0
-46,South Dakota,SD,47,5,0,0
-47,Tennessee,TN,48,5,0,0
-48,Texas,TX,49,5,0,0
-49,Virgin Islands,VI,52,5,0,0
-50,Utah,UT,50,5,0,0
-51,Vermont,VT,51,5,0,8
-52,Virginia,VA,53,5,0,5
-53,Washington,WA,54,5,0,0
-54,West Virginia,WV,55,5,0,1
-55,Wisconsin,WI,56,5,0,0
-56,Wyoming,WY,57,5,0,0
-1,Alabama,AL,1,7,0,1
-2,Alaska,AK,2,7,0,5
-3,American Samoa,AS,3,7,0,0
-4,Arizona,AZ,4,7,0,0
-5,Arkansas,AR,5,7,0,9
-6,California,CA,6,7,0,0
-7,Colorado,CO,7,7,0,0
-8,Connecticut,CT,8,7,0,0
-9,Delaware,DE,9,7,0,0
-10,Washington DC, DC,11,7,0,10
-11,Florida,FL,12,7,0,0
-12,Georgia,GA,13,7,0,14
-13,Guam,GU,14,7,0,0
-14,Hawaii,HI,15,7,0,1
-15,Idaho,ID,16,7,0,0
-16,Illinois,IL,17,7,0,0
-17,Indiana,IN,18,7,0,0
-18,Iowa,IA,19,7,0,7
-19,Kansas,KS,20,7,0,6
-20,Kentucky,KY,21,7,0,7
-21,Louisiana,LA,22,7,0,0
-22,Maine,ME,23,7,0,0
-23,Maryland,MD,24,7,0,0
-24,Massachusetts,MA,25,7,0,8
-25,Michigan,MI,26,7,0,0
-26,Minnesota,MN,27,7,0,17
-27,Mississippi,MS,28,7,0,0
-28,Missouri,MO,29,7,0,0
-29,Montana,MT,30,7,0,0
-30,Nebraska,NE,31,7,0,0
-31,Nevada,NV,32,7,0,7
-32,New Hampshire,NH,33,7,0,1
-33,New Jersey,NJ,34,7,0,0
-34,New Mexico,NM,35,7,0,0
-35,New York,NY,36,7,0,0
-36,North Carolina,NC,37,7,0,6
-37,North Dakota,ND,38,7,0,0
-38,Northern Marianas,NA,39,7,0,0
-39,Ohio,OH,40,7,0,0
-40,Oklahoma,OK,41,7,0,11
-41,Oregon,OR,42,7,0,0
-42,Pennsylvania,PA,43,7,0,0
-43,Puerto Rico,PR,44,7,0,23
-44,Rhode Island,RI,45,7,0,0
-45,South Carolina,SC,46,7,0,0
-46,South Dakota,SD,47,7,0,0
-47,Tennessee,TN,48,7,0,9
-48,Texas,TX,49,7,0,3
-49,Virgin Islands,VI,52,7,0,0
-50,Utah,UT,50,7,0,0
-51,Vermont,VT,51,7,0,0
-52,Virginia,VA,53,7,0,16
-53,Washington,WA,54,7,0,0
-54,West Virginia,WV,55,7,0,0
-55,Wisconsin,WI,56,7,0,0
-56,Wyoming,WY,57,7,0,1
+57,Alabama,AL,1,6,0,36
+58,Alaska,AK,2,6,0,11
+59,American Samoa,AS,3,6,0,1
+60,Arizona,AZ,4,6,0,58
+61,Arkansas,AR,5,6,0,16
+62,California,CA,6,6,0,127
+63,Colorado,CO,7,6,0,0
+64,Connecticut,CT,8,6,0,28
+65,Delaware,DE,9,6,0,16
+66,Washington DC, DC,11,6,0,0
+67,Florida,FL,12,6,0,99
+68,Georgia,GA,13,6,0,40
+69,Guam,GU,14,6,0,0
+70,Hawaii,HI,15,6,0,11
+71,Idaho,ID,16,6,0,12
+72,Illinois,IL,17,6,0,54
+73,Indiana,IN,18,6,0,57
+74,Iowa,IA,19,6,0,7
+75,Kansas,KS,20,6,0,9
+76,Kentucky,KY,21,6,0,17
+77,Louisiana,LA,22,6,0,25
+78,Maine,ME,23,6,0,9
+79,Maryland,MD,24,6,0,38
+80,Massachusetts,MA,25,6,0,22
+81,Michigan,MI,26,6,0,25
+82,Minnesota,MN,27,6,0,8
+83,Mississippi,MS,28,6,0,25
+84,Missouri,MO,29,6,0,37
+85,Montana,MT,30,6,0,27
+86,Nebraska,NE,31,6,0,36
+87,Nevada,NV,32,6,0,16
+88,New Hampshire,NH,33,6,0,12
+89,New Jersey,NJ,34,6,0,51
+90,New Mexico,NM,35,6,0,24
+91,New York,NY,36,6,0,89
+92,North Carolina,NC,37,6,0,29
+93,North Dakota,ND,38,6,0,0
+94,Northern Marianas,NA,39,6,0,0
+95,Ohio,OH,40,6,0,0
+96,Oklahoma,OK,41,6,0,13
+97,Oregon,OR,42,6,0,18
+98,Pennsylvania,PA,43,6,0,64
+99,Puerto Rico,PR,44,6,0,0
+100,Rhode Island,RI,45,6,0,10
+101,South Carolina,SC,46,6,0,50
+102,South Dakota,SD,47,6,0,29
+103,Tennessee,TN,48,6,0,33
+104,Texas,TX,49,6,0,48
+105,Virgin Islands,VI,52,6,0,0
+106,Utah,UT,50,6,0,40
+107,Vermont,VT,51,6,0,8
+108,Virginia,VA,53,6,0,17
+109,Washington,WA,54,6,0,40
+110,West Virginia,WV,55,6,0,32
+111,Wisconsin,WI,56,6,0,6
+112,Wyoming,WY,57,6,0,1
+57,Alabama,AL,1,4,0,12
+58,Alaska,AK,2,4,0,12
+59,American Samoa,AS,3,4,0,0
+60,Arizona,AZ,4,4,0,0
+61,Arkansas,AR,5,4,0,15
+62,California,CA,6,4,0,0
+63,Colorado,CO,7,4,0,0
+64,Connecticut,CT,8,4,0,0
+65,Delaware,DE,9,4,0,0
+66,Washington DC, DC,11,4,0,0
+67,Florida,FL,12,4,0,0
+68,Georgia,GA,13,4,0,18
+69,Guam,GU,14,4,0,0
+70,Hawaii,HI,15,4,0,7
+71,Idaho,ID,16,4,0,20
+72,Illinois,IL,17,4,0,9
+73,Indiana,IN,18,4,0,0
+74,Iowa,IA,19,4,0,8
+75,Kansas,KS,20,4,0,24
+76,Kentucky,KY,21,4,0,15
+77,Louisiana,LA,22,4,0,18
+78,Maine,ME,23,4,0,12
+79,Maryland,MD,24,4,0,0
+80,Massachusetts,MA,25,4,0,4
+81,Michigan,MI,26,4,0,17
+82,Minnesota,MN,27,4,0,13
+83,Mississippi,MS,28,4,0,15
+84,Missouri,MO,29,4,0,15
+85,Montana,MT,30,4,0,0
+86,Nebraska,NE,31,4,0,0
+87,Nevada,NV,32,4,0,6
+88,New Hampshire,NH,33,4,0,3
+89,New Jersey,NJ,34,4,0,0
+90,New Mexico,NM,35,4,0,0
+91,New York,NY,36,4,0,0
+92,North Carolina,NC,37,4,0,27
+93,North Dakota,ND,38,4,0,0
+94,Northern Marianas,NA,39,4,0,0
+95,Ohio,OH,40,4,0,0
+96,Oklahoma,OK,41,4,0,0
+97,Oregon,OR,42,4,0,5
+98,Pennsylvania,PA,43,4,0,4
+99,Puerto Rico,PR,44,4,0,0
+100,Rhode Island,RI,45,4,0,3
+101,South Carolina,SC,46,4,0,0
+102,South Dakota,SD,47,4,0,0
+103,Tennessee,TN,48,4,0,16
+104,Texas,TX,49,4,0,104
+105,Virgin Islands,VI,52,4,0,0
+106,Utah,UT,50,4,0,0
+107,Vermont,VT,51,4,0,0
+108,Virginia,VA,53,4,0,8
+109,Washington,WA,54,4,0,0
+110,West Virginia,WV,55,4,0,0
+111,Wisconsin,WI,56,4,0,36
+112,Wyoming,WY,57,4,0,23
+57,Alabama,AL,1,5,0,0
+58,Alaska,AK,2,5,0,0
+59,American Samoa,AS,3,5,0,0
+60,Arizona,AZ,4,5,0,0
+61,Arkansas,AR,5,5,0,0
+62,California,CA,6,5,0,0
+63,Colorado,CO,7,5,0,0
+64,Connecticut,CT,8,5,0,0
+65,Delaware,DE,9,5,0,0
+66,Washington DC, DC,11,5,0,9
+67,Florida,FL,12,5,0,0
+68,Georgia,GA,13,5,0,0
+69,Guam,GU,14,5,0,0
+70,Hawaii,HI,15,5,0,0
+71,Idaho,ID,16,5,0,0
+72,Illinois,IL,17,5,0,6
+73,Indiana,IN,18,5,0,0
+74,Iowa,IA,19,5,0,1
+75,Kansas,KS,20,5,0,1
+76,Kentucky,KY,21,5,0,7
+77,Louisiana,LA,22,5,0,0
+78,Maine,ME,23,5,0,2
+79,Maryland,MD,24,5,0,0
+80,Massachusetts,MA,25,5,0,8
+81,Michigan,MI,26,5,0,17
+82,Minnesota,MN,27,5,0,0
+83,Mississippi,MS,28,5,0,0
+84,Missouri,MO,29,5,0,0
+85,Montana,MT,30,5,0,0
+86,Nebraska,NE,31,5,0,0
+87,Nevada,NV,32,5,0,1
+88,New Hampshire,NH,33,5,0,4
+89,New Jersey,NJ,34,5,0,0
+90,New Mexico,NM,35,5,0,0
+91,New York,NY,36,5,0,4
+92,North Carolina,NC,37,5,0,9
+93,North Dakota,ND,38,5,0,0
+94,Northern Marianas,NA,39,5,0,0
+95,Ohio,OH,40,5,0,66
+96,Oklahoma,OK,41,5,0,14
+97,Oregon,OR,42,5,0,5
+98,Pennsylvania,PA,43,5,0,0
+99,Puerto Rico,PR,44,5,0,0
+100,Rhode Island,RI,45,5,0,5
+101,South Carolina,SC,46,5,0,0
+102,South Dakota,SD,47,5,0,0
+103,Tennessee,TN,48,5,0,0
+104,Texas,TX,49,5,0,0
+105,Virgin Islands,VI,52,5,0,0
+106,Utah,UT,50,5,0,0
+107,Vermont,VT,51,5,0,8
+108,Virginia,VA,53,5,0,5
+109,Washington,WA,54,5,0,0
+110,West Virginia,WV,55,5,0,1
+111,Wisconsin,WI,56,5,0,0
+112,Wyoming,WY,57,5,0,0
+57,Alabama,AL,1,7,0,1
+58,Alaska,AK,2,7,0,5
+59,American Samoa,AS,3,7,0,0
+60,Arizona,AZ,4,7,0,0
+61,Arkansas,AR,5,7,0,9
+62,California,CA,6,7,0,0
+63,Colorado,CO,7,7,0,0
+64,Connecticut,CT,8,7,0,0
+65,Delaware,DE,9,7,0,0
+66,Washington DC, DC,11,7,0,10
+67,Florida,FL,12,7,0,0
+68,Georgia,GA,13,7,0,14
+69,Guam,GU,14,7,0,0
+70,Hawaii,HI,15,7,0,1
+71,Idaho,ID,16,7,0,0
+72,Illinois,IL,17,7,0,0
+73,Indiana,IN,18,7,0,0
+74,Iowa,IA,19,7,0,7
+75,Kansas,KS,20,7,0,6
+76,Kentucky,KY,21,7,0,7
+77,Louisiana,LA,22,7,0,0
+78,Maine,ME,23,7,0,0
+79,Maryland,MD,24,7,0,0
+80,Massachusetts,MA,25,7,0,8
+81,Michigan,MI,26,7,0,0
+82,Minnesota,MN,27,7,0,17
+83,Mississippi,MS,28,7,0,0
+84,Missouri,MO,29,7,0,0
+85,Montana,MT,30,7,0,0
+86,Nebraska,NE,31,7,0,0
+87,Nevada,NV,32,7,0,7
+88,New Hampshire,NH,33,7,0,1
+89,New Jersey,NJ,34,7,0,0
+90,New Mexico,NM,35,7,0,0
+91,New York,NY,36,7,0,0
+92,North Carolina,NC,37,7,0,6
+93,North Dakota,ND,38,7,0,0
+94,Northern Marianas,NA,39,7,0,0
+95,Ohio,OH,40,7,0,0
+96,Oklahoma,OK,41,7,0,11
+97,Oregon,OR,42,7,0,0
+98,Pennsylvania,PA,43,7,0,0
+99,Puerto Rico,PR,44,7,0,23
+100,Rhode Island,RI,45,7,0,0
+101,South Carolina,SC,46,7,0,0
+102,South Dakota,SD,47,7,0,0
+103,Tennessee,TN,48,7,0,9
+104,Texas,TX,49,7,0,3
+105,Virgin Islands,VI,52,7,0,0
+106,Utah,UT,50,7,0,0
+107,Vermont,VT,51,7,0,0
+108,Virginia,VA,53,7,0,16
+109,Washington,WA,54,7,0,0
+110,West Virginia,WV,55,7,0,0
+111,Wisconsin,WI,56,7,0,0
+112,Wyoming,WY,57,7,0,1

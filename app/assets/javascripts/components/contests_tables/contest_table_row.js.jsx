@@ -11,11 +11,11 @@ var ContestTableRow = React.createClass({
 
    contestRowContent: function(){
     contestInformation = this.props.result.contestInformation
-    return this.props.contestHeaders.map(function(header){
+    return this.props.contestHeaders.map(function(header, i){
       var value = contestInformation[header].value;
       var display = header === "Date" ? moment(value).format("LL") : value;
       return (
-        <td className="left aligned">{display}</td>
+        <td className="left aligned" key={i}>{display}</td>
       )
     });
    },
@@ -30,6 +30,7 @@ var ContestTableRow = React.createClass({
       return function(turnOn){
         if (!turnOn) return updateResults(symbol, candidateId, 0);
         updateResults(symbol, candidateId, delegateCount);  
+        console.log("winner "+symbol+", "+candidateId+", "+delegateCount);
       }
    },
 
@@ -37,7 +38,7 @@ var ContestTableRow = React.createClass({
    sliderColumn: function(header){
      return (
 
-        <td className="center aligned" style={this.props.result.candidatesResults[header].style}>
+        <td className="center aligned" key={header} style={this.props.result.candidatesResults[header].style}>
           <ContestSlider candidateId={this.props.result.candidatesResults[header].id} currentValue={this.props.result.candidatesResults[header].value} maxDelegates={this.props.result.contestInformation["Delegates"].value} sliderClass={("."+this.props.result.symbol+"-row").replace(/ /g,'')} updateResults={this.updateResults} />
           <div className="amount">
            {this.props.result.candidatesResults[header].value}
@@ -49,7 +50,7 @@ var ContestTableRow = React.createClass({
    selectorColumn: function(header){
 
      return (
-        <td className="center aligned" style={this.props.result.candidatesResults[header].style}>
+        <td className="center aligned" key={header} style={this.props.result.candidatesResults[header].style}>
           <ContestSelector setWinner={this.setSelectorWinner(header)} candidateId={this.props.result.candidatesResults[header].id} turnOn={(this.props.result.candidatesResults[header].value > 0)}/>
           <div className="amount">
            {this.props.result.candidatesResults[header].value}
@@ -60,7 +61,7 @@ var ContestTableRow = React.createClass({
 
    valueColumn: function(header){
         return (
-      <td className="center aligned" style={this.props.result.candidatesResults[header].style}>
+      <td className="center aligned" key={header} style={this.props.result.candidatesResults[header].style}>
         {this.props.result.candidatesResults[header].value}
       </td>
     );
@@ -68,7 +69,7 @@ var ContestTableRow = React.createClass({
    
    blankColumn: function(header){
     return (
-      <td className="center aligned" style={{opacity: 0.3, color: "red"}}>
+      <td className="center aligned" key={header} style={{opacity: 0.3, color: "red"}}>
         <i className="fa fa-times" aria-hidden="true"></i>
       </td>
     );
@@ -85,7 +86,7 @@ var ContestTableRow = React.createClass({
     var blankColumn = this.blankColumn;
     var inputColumn = this.inputColumn;
     var candidatesResults = this.props.result.candidatesResults
-    return this.props.candidatesHeaders.map(function(header){
+    return this.props.candidatesHeaders.map(function(header, i){
       if(!candidatesResults[header]) return blankColumn();
       return isComplete ? valueColumn(header) : inputColumn(header); 
     });

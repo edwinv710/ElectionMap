@@ -5,7 +5,7 @@ MapStore = function(election){
   var createMapStore = function(){
       election.contests.forEach(function(contest){
        if(contest.winner > 0){
-         var candidateIndex = election.candidateIdToIndex[contest.winner.toString()];
+         var candidateIndex = election.candidateIdToIndex[contest.winner];
          data[contest.stateLabel] = election.candidates[candidateIndex].color;
        }else{ data[contest.stateLabel] = USMapConfig.config.defaultFillColor; }
       });

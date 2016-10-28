@@ -20,6 +20,7 @@ var Contest = function(contest){
       results.forEach(function(result){
          totalsByCandidates[result.candidateId] = ((totalsByCandidates[result.candidateId] || 0) + result.delegateCount);
       });
+      // console.log(totalsByCandidates);
    }
 
    var setWinner = function(){
@@ -44,7 +45,7 @@ var Contest = function(contest){
    };
 
    var update = function(candidateId, value){
-      if(this.rule != "proportional" && value > 0) resetValues();
+      if(this.rule != "proportional" && value > 0) { resetValues() };
       var result = results.find(function(r){ return r.belongsTo(candidateId)});
       if(result){
          var difference = value - totalsByCandidates[candidateId];
@@ -64,6 +65,7 @@ var Contest = function(contest){
       if (results.length == 0) return  -1;
       if (results.length == 1) return results[0].candidateId;
       
+      // console.log(totalsByCandidates)
 
       var keysSorted = Object.keys(totalsByCandidates).sort(function(a, b){
          return totalsByCandidates[b] - totalsByCandidates[a];

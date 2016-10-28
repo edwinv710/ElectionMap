@@ -44,15 +44,15 @@ elections_json.each do |e|
    when "Democratic Primary"
       
       democratic_contests_json.each do |dc|
-         c = Contest.create(election: election, state: states[dc["state_id"]], number_delegates: dc["number_delegates"], date: Date.strptime(dc["date"], '%m/%d/%Y'), contest_type: dc["contest_type"], rule: (dc["rule"].to_s.size > 3 ? dc["rule"] : "proportional"))
+         c = Contest.create(election: election, state: states[dc["state_id"]-1], number_delegates: dc["number_delegates"], date: Date.strptime(dc["date"], '%m/%d/%Y'), contest_type: dc["contest_type"], rule: (dc["rule"].to_s.size > 3 ? dc["rule"] : "proportional"))
       end
    when "Republican Primary"
       republican_contests_json.each do |dc|
-         Contest.create(election: election, state: states[dc["state_id"]], number_delegates: dc["number_delegates"], date: Date.strptime(dc["date"], '%m/%d/%Y'), contest_type: dc["contest_type"], rule: dc["rule"].to_s.size > 3 ? dc["rule"] : "proportional")
+         Contest.create(election: election, state: states[dc["state_id"]-1], number_delegates: dc["number_delegates"], date: Date.strptime(dc["date"], '%m/%d/%Y'), contest_type: dc["contest_type"], rule: dc["rule"].to_s.size > 3 ? dc["rule"] : "proportional")
       end
    when "General Election"
       general_contests_json.each do |dc|
-         Contest.create(election: election, state: states[dc["state_id"]], number_delegates: dc["number_delegates"], date: Date.strptime(dc["date"], '%m/%d/%Y'), contest_type: dc["contest_type"], rule: dc["rule"].to_s.size > 3 ? dc["rule"] : "proportional")
+         Contest.create(election: election, state: states[dc["state_id"]-1], number_delegates: dc["number_delegates"], date: Date.strptime(dc["date"], '%m/%d/%Y'), contest_type: dc["contest_type"], rule: dc["rule"].to_s.size > 3 ? dc["rule"] : "proportional")
       end
    end
 end

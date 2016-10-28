@@ -1,5 +1,6 @@
 ElectionConductor = function(electionObject){
 
+   console.log(electionObject);
    var election = Election(electionObject);
    var mapStore = MapStore(election);
    var candidateStore = CandidateStore(election);
@@ -19,10 +20,11 @@ ElectionConductor = function(electionObject){
 
    function createMap(){
       var that = this;
+      var states = election.contests.map(function(contest){return contest.state.symbol});
       map = Map(mapStore.data, function(element, state){
          $(window).scrollTo("."+state+"-row");
       });
-      map.createMap();
+      map.createMap(states);
       map.onStateSelect(function(state){
          that.setActive(state);
       });
@@ -36,8 +38,8 @@ ElectionConductor = function(electionObject){
    }
 
    var updateStateResult = function(state, candidateId, value){
-      
       election.update(state, candidateId, value);
+      updateMapWinner(state, candidateId);
       candidateStore.update(election);
       tableStore.update(state, election);
       updateComponent({candidateStore: candidateStore.data, tableStore: tableStore.data});

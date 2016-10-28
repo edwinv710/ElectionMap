@@ -99,7 +99,13 @@ Map = function(mapStore) {
       }
    }
 
-   var createMap = function() {
+   var createMap = function(states) {
+
+      var stateHash = {};
+
+      states.forEach(function( state ){
+         stateHash[state] = 1;
+      });
 
       vectorMap = new ScaleRaphael('lg-map', config.mapWidth, config.mapHeight),
          attributes = {
@@ -119,9 +125,14 @@ Map = function(mapStore) {
       var boxattrs = {};
       var i = 0;
 
+      console.log("State Hash ");
+      console.log(stateHash);
       for (var state in paths) {
 
          var symbol = paths[i].abbreviation;
+
+
+          if ( !stateHash[symbol] ) { i++; continue; } ;
 
          var shortName = paths[state].name.split('-').join('').toLowerCase();
          regions[shortName] = vectorMap.set();
@@ -265,6 +276,7 @@ Map = function(mapStore) {
 
 
    function updateContest(state, color){
+      if ( !color ) return updateState(state);
       $(".box-"+state).attr("fill", color);
    }
 
